@@ -56,7 +56,7 @@ class Paper(object):
         if yearcount < 1: yearcount = 1
         citsperyear = int(round(int(self.citationCount) / yearcount,0))
         self.score += citsperyear
-        self.score += random.randint(1,10)
+        self.score += random.randint(1,20)
 
     def __str__(self):
         return '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%d' %(self.mainAuthor,  self.title, self.authors, self.date, self.citationCount, self.pubmedid, self.posted,self.score)
@@ -93,8 +93,8 @@ def main ():
             paperlist.append(newpaper)     
 
     # Init paper db update thread 
-    if args.verbose: logging.basicConfig(level=logging.INFO,format='[%(levelname)s] (%(threadName)-10s) %(message)s',)
-    else:     logging.basicConfig(level=logging.DEBUG,format='[%(levelname)s] (%(threadName)-10s) %(message)s',)
+    if args.verbose: logging.basicConfig(level=logging.DEBUG,format='[%(levelname)s] (%(threadName)-10s) %(message)s',)
+    else:     logging.basicConfig(level=logging.INFO,format='[%(levelname)s] (%(threadName)-10s) %(message)s',)
     threads = [] 
     # Init citation count thread
     # Init Posting thread 
@@ -222,11 +222,11 @@ def postThread():
     f = open(paperlistfile, 'w')            
     for paper in paperlist:
         f.write('%s\n' %paper)
-    f.close()                 
+    f.close()
     while (True):
         if not lock.locked():   
             logging.info('Last Tweet at %s' %status.created_at)                
-            if datetime.datetime.now() > (lastTweetTime + datetime.timedelta(minutes=55)):    
+            if datetime.datetime.now() > (lastTweetTime + datetime.timedelta(minutes=55)):
                 logging.debug('Posting: %s' %status.created_at)
                 for paper in paperlist:
                     message = ''
