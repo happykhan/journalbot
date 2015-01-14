@@ -6,7 +6,7 @@ Brisse S
 Brown CT
 Bryant, David
 Caccamo, Mario
-Chikhi R 
+Chikhi R
 Croucher NJ
 Darling AE
 Didelot X
@@ -35,7 +35,7 @@ Manning SD
 McClelland, Michael
 McNally, Alan
 Myers, Gene
-Pace NR
+Pace, Norman R
 Pallen MJ
 Parkhill J
 Petty NK
@@ -49,7 +49,6 @@ Schembri MA
 Seemann T
 Sheppard SK
 Thomson NR
-Timms, Peter
 Treangen TJ
 Tyson GW
 Vandamme AM
