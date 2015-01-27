@@ -78,7 +78,7 @@ lock = threading.Lock()
 def main ():
 
     global args
-    print 'Hello world!'
+    print 'Starting JournalBot'
     if args.output != None:
         print 'Output: ' + args.output
 
@@ -100,7 +100,7 @@ def main ():
     # Init Posting thread 
     update = threading.Thread(target=updateThread,args=(args.updatehours,))
     threads.append(update)
-    post = threading.Thread(target=postThread)
+    post = threading.Thread(target=postThread, args=(paperlist,))
     threads.append(post)
     for t in threads: t.start()
     for t in threads: t.join()
@@ -112,7 +112,7 @@ def updateThread(updatehours):
     Entrez.email = "nabil@happykhan.com"
     # Retrieve all papers for each author from file 
     # Use entrez pubmed search
-    global paperlist, lock
+    global lock
     logging.info('Launching update thread')
     updatefile = os.path.join(args.workdir,'lastupdate.txt')
     paperlistfile = os.path.join(args.workdir,'paperlist.txt')
@@ -128,6 +128,7 @@ def updateThread(updatehours):
         if lastupdate + (updatehours * 3600) < time.time():
             logging.info('Running update cycle')
             lock.acquire()
+            global paperlist            
             authorlist = [] 
             f = open(os.path.join(args.workdir,'authorlist.txt'))
             for line in f.readlines():
@@ -184,9 +185,9 @@ def exportPaperDb():
     print 'not done'
 
 
-def postThread():
+def postThread(initPaperlist):
+    time.sleep(60)              
     logging.info('Running posting thread')
-    global paperlist
     import tweepy  
     import random       
     import datetime          
@@ -210,7 +211,7 @@ def postThread():
     for page in tweepy.Cursor(api.user_timeline, count=200).pages(16):
         page_list.append(page)
     # Intial check of paper post status.
-    for paper in paperlist:
+    for paper in initPaperlist:
         message = ''
         if paper.isNew() == True: message += 'NEW: '
         if paper.isOfNote() == True: message += 'OF NOTE: '
@@ -220,7 +221,7 @@ def postThread():
                 if status.text.encode('ascii', 'ignore').find(tweetTitle) != -1: 
                     paper.posted = 'True'       
     f = open(paperlistfile, 'w')            
-    for paper in paperlist:
+    for paper in initPaperlist:
         f.write('%s\n' %paper)
     f.close()
     while (True):
@@ -228,6 +229,7 @@ def postThread():
             logging.info('Last Tweet at %s' %status.created_at)                
             if datetime.datetime.now() > (lastTweetTime + datetime.timedelta(minutes=240)):
                 logging.debug('Posting: %s' %status.created_at)
+                global paperlist                
                 for paper in paperlist:
                     message = ''
                     if paper.isNew() == True: message += 'NEW: '
