@@ -20,10 +20,12 @@ Finlay BB
 Foret S
 Gardy J
 Gilmour MW
+Hanage, BW
 Harmsen D
 Harris, Simon R
 Hazen TH
 Henderson IR
+Hinton JC
 Holt KE
 Huson DH
 Koonin EV
@@ -43,6 +45,7 @@ Pevzner PA
 Quinlan A
 Rasko DA
 Ravel J
+Rocha EPC
 Rossen, John WA
 Salzberg SL
 Schembri MA
@@ -53,6 +56,7 @@ Treangen TJ
 Tyson GW
 Vandamme AM
 Watson, Mick
+Weill, FX
 Whittam TS
 Woese CR
 Zerbino DR
