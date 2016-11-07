@@ -16,7 +16,7 @@ updates.
 
 class Paper(object):
     def __init__(self, citationCount, authors, mainAuthor, pubmedid, title,
-                 date, posted, score):
+                 date,  journal, ifactor=2, score=0, posted= False):
         self.citationCount = citationCount
         self.authors = authors
         self.mainAuthor = mainAuthor
@@ -25,6 +25,9 @@ class Paper(object):
         self.date = date
         self.posted = posted
         self.score = score
+        self.journal = journal
+        self.ifactor = ifactor
+        
 
     def isOfNote(self):
         CUTOFF = 20
@@ -38,7 +41,7 @@ class Paper(object):
 
     def isNew(self):
         import datetime
-        CUTOFF = 28
+        CUTOFF = 31
         pubDate = datetime.datetime.strptime(self.date, "%Y/%m/%d %H:%M")          
         dateCutoff = datetime.datetime.combine(datetime.date.today() - datetime.timedelta(days=CUTOFF), datetime.datetime.min.time())     
         if pubDate > dateCutoff: return True
@@ -47,33 +50,48 @@ class Paper(object):
     def calculateScore(self):
         import datetime
         import random
-        CUTOFF = 180
+        CUTOFF = 90
         dateCutoff = datetime.datetime.combine(datetime.date.today() - datetime.timedelta(days=CUTOFF), datetime.datetime.min.time())
         pubDate = datetime.datetime.strptime(self.date, "%Y/%m/%d %H:%M")
-        if pubDate > dateCutoff: self.score = (CUTOFF - (datetime.datetime.today() - pubDate).days) 
-        else: self.score = 0
+        if pubDate > dateCutoff: 
+            self.score = (CUTOFF - (datetime.datetime.today() - pubDate).days) *4
+        else: 
+            self.score = 0
         yearcount = ( datetime.date.today().year - pubDate.year) -1 
-        if yearcount < 1: yearcount = 1
+        if yearcount < 1: 
+            yearcount = 1
         citsperyear = int(round(int(self.citationCount) / yearcount,0))
+        if len(self.authors) > 5: 
+            if self.mainAuthor in self.authors[2:-2]:
+                self.score = self.score -  (len(self.authors)  * 2 )
         self.score += citsperyear
-        self.score += random.randint(1,20)
+        self.score += (self.ifactor *3) 
+        self.score += random.randint(1,5)
 
     def __str__(self):
-        return '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%d' %(self.mainAuthor,  self.title, self.authors, self.date, self.citationCount, self.pubmedid, self.posted,self.score)
+        return '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%d\t%s\t%d' %(self.mainAuthor,  self.title, self.authors, self.date, self.citationCount, self.pubmedid, self.posted, self.score, self.journal, self.ifactor)
 
+    @classmethod
+    def from_string(cls, string): 
+        linArray = string.strip().split('\t') 
+    
+        return cls(linArray[4], ast.literal_eval(linArray[2]), linArray[0], linArray[5], linArray[1], linArray[3], linArray[8],score=int(linArray[7]),ifactor =int(linArray[9]),posted=linArray[6]   )
 
 
 import sys, os, traceback, argparse
-import time
+import time, re
 import __init__ as meta 
 import threading
 import logging
 from time import gmtime
+import ast 
 
 epi = "Licence: "+meta.__licence__ +  " by " +meta.__author__ + " <" +meta.__author_email__ + ">"
 
 paperlist = []
 lock = threading.Lock()
+ifactor = {} 
+blacklist = {} 
 
 def main ():
 
@@ -81,16 +99,36 @@ def main ():
     print 'Starting JournalBot'
     if args.output != None:
         print 'Output: ' + args.output
-
+    # Load journal black list: 
+    blacklistfile = os.path.join(args.workdir,'blacklist.txt')
+    if os.path.exists(blacklistfile):
+        f = open(blacklistfile,'r')
+        for line in f.readlines():
+            blacklist[line.strip()] = True 
+    
     # Load up Papers db. 
     paperlistfile = os.path.join(args.workdir,'paperlist.txt')
     if os.path.exists(paperlistfile):
         f = open(paperlistfile,'r')
         for line in f.readlines():
-            linArray = line.strip().split('\t') 
-            newpaper = Paper(linArray[4], linArray[2], linArray[0], linArray[5], 
-                             linArray[1], linArray[3], linArray[6],int(linArray[7]))
+            newpaper = Paper.from_string(line)
+            newpaper.calculateScore()
             paperlist.append(newpaper)     
+    # Load Journal db:
+    journalfile = os.path.join(args.workdir,'ifactor.txt')
+    
+    if os.path.exists(journalfile):
+        regex = re.compile('^\d+\s([\[A-Za-z&\-\s]+)[ \t]+\d+,?\d+\W+(\d+).\d+')
+        with open(journalfile,'r') as f:
+            for line in f.readlines()[1:]:
+                try: 
+                    # 129 Annual Review of Medicine 5,612 12.928 0.0135
+                    match = regex.search(line)
+                    ifactor[str(match.group(1)).lower()] = int(match.group(2))
+                    
+                except Exception as e:
+                    print 'Could not read line:  %s' % line.strip()
+    
 
     # Init paper db update thread 
     if args.verbose: logging.basicConfig(level=logging.DEBUG,format='[%(levelname)s] (%(threadName)-10s) %(message)s',)
@@ -134,38 +172,47 @@ def updateThread(updatehours):
             for line in f.readlines():
                 authorlist.append(line.strip())                
             for mainAuthor in authorlist:
-                handle = Entrez.esearch(db="pubmed", term="%s [AU]" %mainAuthor,retmax=10000)
-                record = Entrez.read(handle)
-                handle.close()
-                entries = record['IdList']
-                entrylist = []
-                count = 0
-                for e in entries:
-                    entrylist.append(e)
-                    count += 1
-                    if count % 20 == 0 or count == len(entries): 
-                        result = [] 
-                        try:
-                            handle = Entrez.esummary(db="pubmed", id=",".join(entrylist))
-                            result = Entrez.read(handle)
-                            handle.close()
-                        except:
-                            logging.error('Error in loading %s' %entrylist[0])
-                        entrylist = []                                      
-                        for r in result:
-                            newpaper = Paper(r['PmcRefCount'], str(r['AuthorList']).encode('ascii', 'ignore'), \
-                                             mainAuthor, str(r['ArticleIds']['pubmed'][0].encode('ascii', 'ignore')), \
-                                             str(r['Title'].encode('ascii', 'ignore')), \
-                                             str(r['History']['pubmed'][0].encode('ascii', 'ignore')), False,0) 
-                            newpaper.calculateScore()
-                            # Is the paper already there? 
-                            duplicate = False
-                            for oldpaper in paperlist:
-                                if newpaper.title == oldpaper.title:
-                                    duplicate = True
-                                    oldpaper.citationCount = newpaper.citationCount
-                                    oldpaper.calculateScore()
-                            if not duplicate: paperlist.append(newpaper)
+                count = 0 
+                while count < 3: 
+                    try:
+                        handle = Entrez.esearch(db="pubmed", term="%s" %mainAuthor,field='author',retmax=10000)
+                        record = Entrez.read(handle)
+                        time.sleep(3) 
+                        handle.close()
+                        entries = record['IdList']
+                        entrylist = []
+                        count = 0
+                        chunks = [entries[x:x+20] for x in xrange(0, len(entries), 20)]                
+                        for entrylist in chunks:
+                            result = [] 
+                            try:
+                                handle = Entrez.esummary(db="pubmed", id=",".join(entrylist))
+                                result = Entrez.read(handle)
+                                handle.close()
+                            except:
+                                logging.error('Error in loading %s' %entrylist[0])
+                            for r in result:
+                                if not blacklist.get(r['FullJournalName'], None): 
+                                    ifact = ifactor.get(r['FullJournalName'].lower(), 2)
+                                    newpaper = Paper(r['PmcRefCount'], str(r['AuthorList']).encode('ascii', 'ignore'), \
+                                                         mainAuthor, str(r['ArticleIds']['pubmed'][0].encode('ascii', 'ignore')), \
+                                                         str(r['Title'].encode('ascii', 'ignore')), \
+                                                         str(r['History']['pubmed'][0].encode('ascii', 'ignore')), r['FullJournalName'], ifact) 
+                                    newpaper.calculateScore()
+                                    # Is the paper already there? 
+                                    duplicate = False
+                                    for oldpaper in paperlist:
+                                        if newpaper.title == oldpaper.title:
+                                            duplicate = True
+                                            oldpaper.citationCount = newpaper.citationCount
+                                            oldpaper.calculateScore()
+                                    if not duplicate: 
+                                        paperlist.append(newpaper)
+                    except RuntimeError: 
+                        count += 1 
+                        time.sleep(30) 
+                        continue
+                    break
             paperlist.sort(key=lambda paper: (paper.score, paper.citationCount), reverse=True)
             f = open(paperlistfile, 'w')            
             for paper in paperlist:
@@ -221,8 +268,10 @@ def postThread(initPaperlist):
                 if status.text.encode('ascii', 'ignore').find(tweetTitle) != -1: 
                     paper.posted = 'True'       
     f = open(paperlistfile, 'w')            
+    initPaperlist.sort(key=lambda paper: (paper.score, paper.citationCount), reverse=True)
     for paper in initPaperlist:
-        f.write('%s\n' %paper)
+        if not blacklist.get(paper.journal, None):         
+            f.write('%s\n' %paper)
     f.close()
     while (True):
         if not lock.locked():   
@@ -244,7 +293,7 @@ def postThread(initPaperlist):
                         message += tweetTitle
                         message += ' ' + getShortUrl('http://www.ncbi.nlm.nih.gov/pubmed/%s' %paper.pubmedid)
                         try:                      
-                            api.update_status(message)
+                        #    api.update_status(message)
                             lastTweetTime = datetime.datetime.now()
                             paper.posted = 'True'                                      
                         except: 
