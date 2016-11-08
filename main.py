@@ -41,7 +41,7 @@ class Paper(object):
 
     def isNew(self):
         import datetime
-        CUTOFF = 31
+        CUTOFF = 10
         pubDate = datetime.datetime.strptime(self.date, "%Y/%m/%d %H:%M")          
         dateCutoff = datetime.datetime.combine(datetime.date.today() - datetime.timedelta(days=CUTOFF), datetime.datetime.min.time())     
         if pubDate > dateCutoff: return True
