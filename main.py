@@ -50,11 +50,11 @@ class Paper(object):
     def calculateScore(self):
         import datetime
         import random
-        CUTOFF = 90
+        CUTOFF = 180
         dateCutoff = datetime.datetime.combine(datetime.date.today() - datetime.timedelta(days=CUTOFF), datetime.datetime.min.time())
         pubDate = datetime.datetime.strptime(self.date, "%Y/%m/%d %H:%M")
         if pubDate > dateCutoff: 
-            self.score = (CUTOFF - (datetime.datetime.today() - pubDate).days) *4
+            self.score = (CUTOFF - (datetime.datetime.today() - pubDate).days) 
         else: 
             self.score = 0
         yearcount = ( datetime.date.today().year - pubDate.year) -1 
@@ -63,9 +63,9 @@ class Paper(object):
         citsperyear = int(round(int(self.citationCount) / yearcount,0))
         if len(self.authors) > 5: 
             if self.mainAuthor in self.authors[2:-2]:
-                self.score = self.score -  (len(self.authors)  * 2 )
-        self.score += citsperyear
-        self.score += (self.ifactor *3) 
+                self.score = self.score -  (len(self.authors)  * 5 )
+#        self.score += citsperyear
+        self.score += (self.ifactor) 
         self.score += random.randint(1,5)
 
     def __str__(self):
@@ -93,12 +93,28 @@ lock = threading.Lock()
 ifactor = {} 
 blacklist = {} 
 
+consumer_key = None
+consumer_secret = None 
+access_token =  None 
+access_token_secret = None 
+
 def main ():
 
     global args
     print 'Starting JournalBot'
     if args.output != None:
         print 'Output: ' + args.output
+    global consumer_key
+    global consumer_secret
+    global access_token
+    global access_token_secret
+    consumer_key = os.environ.get('consumer_key', None)
+    consumer_secret = os.environ.get('consumer_secret', None)
+    access_token = os.environ.get('access_token', None)
+    access_token_secret = os.environ.get('access_token_secret', None)
+    if not (consumer_secret and consumer_key and access_token and access_token_secret):
+        logging.error('TOKENS NOT FOUND')
+        sys.exit(0)
     # Load journal black list: 
     blacklistfile = os.path.join(args.workdir,'blacklist.txt')
     if os.path.exists(blacklistfile):
@@ -175,6 +191,7 @@ def updateThread(updatehours):
                 count = 0 
                 while count < 3: 
                     try:
+                        logging.info('Fetching  papers from %s ' %mainAuthor)                        
                         handle = Entrez.esearch(db="pubmed", term="%s" %mainAuthor,field='author',retmax=10000)
                         record = Entrez.read(handle)
                         time.sleep(3) 
@@ -208,11 +225,12 @@ def updateThread(updatehours):
                                             oldpaper.calculateScore()
                                     if not duplicate: 
                                         paperlist.append(newpaper)
-                    except RuntimeError: 
+                        break
+                    except Exception: 
                         count += 1 
+                        logging.error('Failed to call authors update %s, waiting 30 seconds' %mainAuthor)
                         time.sleep(30) 
-                        continue
-                    break
+                        #continue
             paperlist.sort(key=lambda paper: (paper.score, paper.citationCount), reverse=True)
             f = open(paperlistfile, 'w')            
             for paper in paperlist:
@@ -238,12 +256,10 @@ def postThread(initPaperlist):
     import tweepy  
     import random       
     import datetime          
-    # Consumer keys and access tokens, used for OAuth  
-    consumer_key = 'IWz0nMsnkbX1hNnxxQMByCdIU'  
-    consumer_secret = 'lvgfYnyct8GorAbRrkCuznRFbNOTSWpghiTLHAdanPTJuvwGCs'  
-    access_token = '2938273641-7Uo4d2TpP8fPWtFGRkNJsnUqH1ZauQq5n9ugVtq'  
-    access_token_secret = '8yrFOztLdrmPIhtv6jcBFzA7Z9fNqNAnQ3szIDFtQ8Hdi'  
-
+    global consumer_key
+    global consumer_secret
+    global access_token
+    global access_token_secret
     # OAuth process, using the keys and tokens  
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)  
     auth.set_access_token(access_token, access_token_secret)  
@@ -276,7 +292,7 @@ def postThread(initPaperlist):
     while (True):
         if not lock.locked():   
             logging.info('Last Tweet at %s' %status.created_at)                
-            if datetime.datetime.now() > (lastTweetTime + datetime.timedelta(minutes=240)):
+            if datetime.datetime.now() > (lastTweetTime + datetime.timedelta(minutes=180)):
                 logging.debug('Posting: %s' %status.created_at)
                 global paperlist                
                 for paper in paperlist:
@@ -293,7 +309,7 @@ def postThread(initPaperlist):
                         message += tweetTitle
                         message += ' ' + getShortUrl('http://www.ncbi.nlm.nih.gov/pubmed/%s' %paper.pubmedid)
                         try:                      
-                        #    api.update_status(message)
+                            api.update_status(message)
                             lastTweetTime = datetime.datetime.now()
                             paper.posted = 'True'                                      
                         except: 
@@ -327,7 +343,7 @@ if __name__ == '__main__':
         parser.add_argument ('-v', '--verbose', action='store_true', default=False, help='verbose output')
         parser.add_argument('--version', action='version', version='%(prog)s ' + meta.__version__)
         parser.add_argument('-o','--output',action='store',help='output prefix')
-        parser.add_argument('-u','--updatehours',action='store',help='interval of hours to run update',type=int,default=8)        
+        parser.add_argument('-u','--updatehours',action='store',help='interval of hours to run update',type=int,default=4)        
         parser.add_argument ('workdir', action='store', help='Working directory')
         args = parser.parse_args()
         if args.verbose: print "Executing @ " + time.asctime()

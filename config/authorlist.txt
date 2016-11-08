@@ -18,7 +18,7 @@ Falush D
 Feil EJ
 Finlay BB
 Foret S
-Gardy J
+Gardy JL
 Gilmour MW
 Hanage, BW
 Harmsen D
@@ -32,14 +32,13 @@ Koonin EV
 Krzywinski M
 Lipman DJ
 Loman NJ
-MacArthur DG
 Manning SD
 McClelland, Michael
 McNally, Alan
 Myers, Gene
 Pace, Norman R
 Pallen MJ
-Parkhill J
+Parkhill, Julian
 Petty NK
 Pevzner PA
 Quinlan A
@@ -49,7 +48,7 @@ Rocha EPC
 Rossen, John WA
 Salzberg SL
 Schembri MA
-Seemann T
+Seemann, Torsten
 Sheppard SK
 Thomson NR
 Treangen TJ
@@ -60,3 +59,18 @@ Weill, FX
 Whittam TS
 Woese CR
 Zerbino DR
+Allaby RG
+Page AJ
+Wee BA
+Aanensen DM
+Carrico JA
+Harris SR
+Dallman TJ
+Deng, Xiangyu
+Chadhuri, Roy
+Phillippy AM
+Maiden MC
+Jolley KA
+Le Hello S
+Ho, Simon
+Banfield JF
