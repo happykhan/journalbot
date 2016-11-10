@@ -11,6 +11,11 @@ updates.
 2014-12-28 Nabil-Fareed Alikhan <nabil@happykhan.com>
     * Added basic functionality. Scirpt loads papers from text files,
       updates to twitter, fetches paper metadata.
+2016-11-08 Nabil-Fareed Alikhan <nabil@happykhan.com>
+    * Patched libraries, timeout handling
+    * Replaced citation counters with IF factoring
+TODO: 
+    * Post with author as twitter handle.
 """
 
 
@@ -292,7 +297,7 @@ def postThread(initPaperlist):
     while (True):
         if not lock.locked():   
             logging.info('Last Tweet at %s' %status.created_at)                
-            if datetime.datetime.now() > (lastTweetTime + datetime.timedelta(minutes=180)):
+            if datetime.datetime.now() > (lastTweetTime + datetime.timedelta(minutes=300)):
                 logging.debug('Posting: %s' %status.created_at)
                 global paperlist                
                 for paper in paperlist:
