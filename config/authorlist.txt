@@ -10,6 +10,9 @@ Chikhi R
 Croucher NJ
 Darling AE
 Didelot X
+Barton, Michael
+Quince, Chris
+Brown, C Titus
 Eddy SR
 Edgar RC
 Eisen JA
@@ -44,7 +47,7 @@ Pevzner PA
 Quinlan A
 Rasko DA
 Ravel J
-Rocha EPC
+Rocha EP
 Rossen, John WA
 Salzberg SL
 Schembri MA
@@ -71,9 +74,15 @@ Chadhuri, Roy
 Phillippy AM
 Maiden MC
 Jolley KA
+Crook, Derrek
+Corander, Jukka
+Lan, Ruiting
 Le Hello S
-Ho, Simon
+Peto, Timothy
+Ho, Simon Y
+Iqbal, Zamin
 Ludovic, Orlando
 Colijn, Caroline
 Taboada, Eduardo
+Wishart, David
 Banfield JF
