@@ -44,7 +44,8 @@ Pallen MJ
 Parkhill, Julian
 Petty NK
 Pevzner PA
-Quinlan A
+Quinlan, Aaron
+Aerts, Jan
 Rasko DA
 Ravel J
 Rocha EP
@@ -65,7 +66,7 @@ Zerbino DR
 Allaby RG
 Page, Andrew J
 Wee BA
-Aanensen DM
+Aanensen, David M
 Carrico JA
 Harris SR
 Dallman TJ
@@ -85,4 +86,5 @@ Ludovic, Orlando
 Colijn, Caroline
 Taboada, Eduardo
 Wishart, David
+Wiens, John J
 Banfield JF

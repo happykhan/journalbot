@@ -256,7 +256,7 @@ def exportPaperDb():
 
 
 def postThread(initPaperlist):
-    time.sleep(60)              
+    time.sleep(5)              
     logging.info('Running posting thread')
     import tweepy  
     import random       
