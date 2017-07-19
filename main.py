@@ -99,16 +99,16 @@ ifactor = {}
 blacklist = {} 
 
 consumer_key = None
-consumer_secret = None 
-access_token =  None 
-access_token_secret = None 
+consumer_secret = None
+access_token =  None
+access_token_secret = None
 
 def main ():
 
     global args
-    print 'Starting JournalBot'
+    print('Starting JournalBot')
     if args.output != None:
-        print 'Output: ' + args.output
+        print('Output: ' + args.output)
     global consumer_key
     global consumer_secret
     global access_token
@@ -168,7 +168,7 @@ def main ():
 
 def updateThread(updatehours):
     from Bio import Entrez
-    Entrez.email = "nabil@happykhan.com"
+    Entrez.email = os.environ.get('entrez_email', None)
     # Retrieve all papers for each author from file 
     # Use entrez pubmed search
     global lock
