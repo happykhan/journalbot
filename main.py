@@ -14,8 +14,8 @@ updates.
 2016-11-08 Nabil-Fareed Alikhan <nabil@happykhan.com>
     * Patched libraries, timeout handling
     * Replaced citation counters with IF factoring
-2017-07-08 Joe Healey <jrj.healey@gmail.com>
-    * 
+2017-07-20 Joe Healey <jrj.healey@gmail.com>
+    * Update biopython requirement to 1.70
 
 TODO: 
     * Post with author as twitter handle.
