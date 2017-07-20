@@ -109,9 +109,9 @@ access_token_secret = None
 def main ():
 
     global args
-    print('Starting JournalBot')
+    print 'Starting JournalBot'
     if args.output != None:
-        print('Output: ' + args.output)
+        print 'Output: ' + args.output
     global consumer_key
     global consumer_secret
     global access_token
