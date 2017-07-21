@@ -5,21 +5,20 @@ Source code for the GibsonGroupBot @ https://twitter.com/GibsonGroupBot
 
 Forked from @happykhan/journalbot
 
-# Set up:
+# Set up
 
-Breaks under python3 so ensure it's run with Python2.7.
 
-*1. Clone the repo:*
+**1. Clone the repo:**
 
     $ git clone https://github.com/jrjhealey/journalbot.git
 
 
-*2. Make sure all dependencies are satisfied:*
+**2. Make sure all dependencies are satisfied:**
 
     $ python -m pip install -r /path/to/journalbot/requirements.txt
 
 
-*3. Set environment variables for Twitter authorisation (see https://apps.twitter.com/):*
+**3. Set environment variables for Twitter authorisation (see https://apps.twitter.com/):**
 
 Create a new twiiter app, and generate a `consumer_key`, `consumer_secret`, `access_token`, `access_token_secret`. Export these as Environment Variables.
 Also create an NCBI/Pubmed Entrez email (https://www.ncbi.nlm.nih.gov/account/?back_url=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fgquery%2F).

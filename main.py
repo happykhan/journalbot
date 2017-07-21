@@ -17,6 +17,7 @@ updates.
 2017-07-20 Joe Healey <jrj.healey@gmail.com>
     * Update biopython requirement to 1.70
     * Use of credentials file
+    * Bug fixes for pubmed search
 
 TODO: 
     * Post with author as twitter handle.
@@ -330,7 +331,7 @@ def postThread(initPaperlist):
                             f.write('%s\n' %paper)
                         f.close()             
                         break; 
-        time.sleep(600)               
+        time.sleep(100)               
 
 def getShortUrl(longurl):            
     import requests
