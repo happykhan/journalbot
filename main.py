@@ -14,6 +14,11 @@ updates.
 2016-11-08 Nabil-Fareed Alikhan <nabil@happykhan.com>
     * Patched libraries, timeout handling
     * Replaced citation counters with IF factoring
+2017-07-20 Joe Healey <jrj.healey@gmail.com>
+    * Update biopython requirement to 1.70
+    * Use of credentials file
+    * Bug fixes for pubmed search
+
 TODO: 
     * Post with author as twitter handle.
 """
@@ -83,7 +88,7 @@ class Paper(object):
         return cls(linArray[4], ast.literal_eval(linArray[2]), linArray[0], linArray[5], linArray[1], linArray[3], linArray[8],score=int(linArray[7]),ifactor =int(linArray[9]),posted=linArray[6]   )
 
 
-import sys, os, traceback, argparse
+import sys, os, traceback, argparse, warnings
 import time, re
 import __init__ as meta 
 import threading
@@ -99,9 +104,9 @@ ifactor = {}
 blacklist = {} 
 
 consumer_key = None
-consumer_secret = None 
-access_token =  None 
-access_token_secret = None 
+consumer_secret = None
+access_token =  None
+access_token_secret = None
 
 def main ():
 
@@ -118,7 +123,7 @@ def main ():
     access_token = os.environ.get('access_token', None)
     access_token_secret = os.environ.get('access_token_secret', None)
     if not (consumer_secret and consumer_key and access_token and access_token_secret):
-        logging.error('TOKENS NOT FOUND')
+        logging.error('TOKENS NOT FOUND - Populate the credentials file, then: source ./credentials')
         sys.exit(0)
     # Load journal black list: 
     blacklistfile = os.path.join(args.workdir,'blacklist.txt')
@@ -168,7 +173,7 @@ def main ():
 
 def updateThread(updatehours):
     from Bio import Entrez
-    Entrez.email = "nabil@happykhan.com"
+    Entrez.email = os.environ.get('entrez_email', None)
     # Retrieve all papers for each author from file 
     # Use entrez pubmed search
     global lock
@@ -196,12 +201,14 @@ def updateThread(updatehours):
                 count = 0 
                 while count < 3: 
                     try:
-                        logging.info('Fetching  papers from %s ' %mainAuthor)                        
-                        handle = Entrez.esearch(db="pubmed", term="%s" %mainAuthor,field='author',retmax=10000)
+                        logging.info('Fetching papers from ' + mainAuthor)                        
+                        handle = Entrez.esearch(db="pubmed", term=mainAuthor, field='author')
                         record = Entrez.read(handle)
                         time.sleep(3) 
                         handle.close()
                         entries = record['IdList']
+			print 'Retrieved the following entries:'
+			for entry in entries : print entry
                         entrylist = []
                         count = 0
                         chunks = [entries[x:x+20] for x in xrange(0, len(entries), 20)]                
@@ -233,7 +240,7 @@ def updateThread(updatehours):
                         break
                     except Exception: 
                         count += 1 
-                        logging.error('Failed to call authors update %s, waiting 30 seconds' %mainAuthor)
+                        logging.error('Failed to call authors update' + mainAuthor + '. Waiting 30 seconds.')
                         time.sleep(30) 
                         #continue
             paperlist.sort(key=lambda paper: (paper.score, paper.citationCount), reverse=True)
@@ -324,7 +331,7 @@ def postThread(initPaperlist):
                             f.write('%s\n' %paper)
                         f.close()             
                         break; 
-        time.sleep(600)               
+        time.sleep(100)               
 
 def getShortUrl(longurl):            
     import requests
