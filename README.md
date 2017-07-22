@@ -35,6 +35,25 @@ Then source this file to create the variables:
 
     $ source /path/to/credentials_file
 
+# Composing a search term
+
+The bot will search for queries contained within the `config/seartchterms.txt` file. These should be composed in PubMed query syntax
+- see https://www.ncbi.nlm.nih.gov/books/NBK3837/#_EntrezHelp_Entrez_Searching_Options_)
+
+An example file would look like (use boolean operators and parentheses to evaluate more
+complex searches):
+
+     Smith J
+     Smith J[author]
+     Jones K
+     E coli
+     polymer AND synthesis
+     nucleus NOT atomic
+     human[organism] AND topoisomerase[protein name]
+     Smith J OR Jones K
+
+
+
 # Troubleshooting
 
 Installation is easy with a Miniconda/Anaconda install:

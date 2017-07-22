@@ -18,7 +18,8 @@ updates.
     * Update biopython requirement to 1.70
     * Use of credentials file
     * Bug fixes for pubmed search
-
+    * Remove specificity for authorship to allow
+      full PubMed query syntax including keywords
 TODO: 
     * Post with author as twitter handle.
 """
@@ -194,21 +195,22 @@ def updateThread(updatehours):
             lock.acquire()
             global paperlist            
             authorlist = [] 
-            f = open(os.path.join(args.workdir,'authorlist.txt'))
+            f = open(os.path.join(args.workdir,'searchterms.txt'))
             for line in f.readlines():
                 authorlist.append(line.strip())                
             for mainAuthor in authorlist:
                 count = 0 
                 while count < 3: 
                     try:
-                        logging.info('Fetching papers from ' + mainAuthor)                        
-                        handle = Entrez.esearch(db="pubmed", term=mainAuthor, field='author')
+                        logging.info('Fetching papers relating to ' + mainAuthor)                        
+                        handle = Entrez.esearch(db="pubmed", term=mainAuthor)
                         record = Entrez.read(handle)
                         time.sleep(3) 
                         handle.close()
                         entries = record['IdList']
-			print 'Retrieved the following entries:'
-			for entry in entries : print entry
+			if args.verbose:
+				print 'Retrieved the following entries:'
+				for entry in entries : print entry
                         entrylist = []
                         count = 0
                         chunks = [entries[x:x+20] for x in xrange(0, len(entries), 20)]                
