@@ -305,8 +305,8 @@ def postThread(initPaperlist):
     f.close()
     while (True):
         if not lock.locked():   
-            logging.info('Last Tweet at %s' %status.created_at)                
-            if datetime.datetime.now() > (lastTweetTime + datetime.timedelta(minutes=300)):
+            logging.info('Last Tweet at ' + str(status.created_at))                
+            if datetime.datetime.now() > (lastTweetTime + datetime.timedelta(minutes=args.tinterval)):
                 logging.debug('Posting: %s' %status.created_at)
                 global paperlist                
                 for paper in paperlist:
@@ -358,6 +358,7 @@ if __name__ == '__main__':
         parser.add_argument('--version', action='version', version='%(prog)s ' + meta.__version__)
         parser.add_argument('-o','--output',action='store',help='output prefix')
         parser.add_argument('-u','--updatehours',action='store',help='interval of hours to run update',type=int,default=4)        
+	parser.add_argument('-t', '--tinterval', action='store',help='Time interval between tweets (minutes)', type=int,default=300)
         parser.add_argument ('workdir', action='store', help='Working directory')
         args = parser.parse_args()
         if args.verbose: print "Executing @ " + time.asctime()
