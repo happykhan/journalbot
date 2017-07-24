@@ -20,7 +20,7 @@ Forked from @happykhan/journalbot
 
 **3. Set environment variables for Twitter authorisation (see https://apps.twitter.com/):**
 
-Create a new twiiter app, and generate a `consumer_key`, `consumer_secret`, `access_token`, `access_token_secret`. Export these as Environment Variables.
+Create a new twitter app, and generate a `consumer_key`, `consumer_secret`, `access_token`, `access_token_secret`. Export these as Environment Variables.
 Also create an NCBI/Pubmed Entrez email (https://www.ncbi.nlm.nih.gov/account/?back_url=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fgquery%2F).
 
 E.g. in a script:
