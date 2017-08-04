@@ -174,7 +174,7 @@ def main ():
 
 def updateThread(updatehours):
     from Bio import Entrez
-    Entrez.email = os.environ.get('entrez_email', None)
+    Entrez.email = os.environ.get('entrez_email', 'nabil@happykhan.com')
     # Retrieve all papers for each author from file 
     # Use entrez pubmed search
     global lock
@@ -195,9 +195,16 @@ def updateThread(updatehours):
             lock.acquire()
             global paperlist            
             authorlist = [] 
-            f = open(os.path.join(args.workdir,'searchterms.txt'))
-            for line in f.readlines():
-                authorlist.append(line.strip())                
+            search_file = os.path.join(args.workdir,'searchterms.txt')
+            if os.path.exists(search_file):
+                f = open(search_file)
+                for line in f.readlines():
+                    authorlist.append(line.strip())                
+            author_file = os.path.join(args.workdir,'authorlist.txt')
+            if os.path.exists(author_file):
+                f = open(author_file)
+                for line in f.readlines():
+                    authorlist.append('%s[AU]' %line.strip())
             for mainAuthor in authorlist:
                 count = 0 
                 while count < 3: 
