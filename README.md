@@ -1,21 +1,20 @@
-GibsonGroupBot
-==============
+Journal Club bot
+================
 
-Source code for the GibsonGroupBot @ https://twitter.com/GibsonGroupBot
+Source code for the @JC_pathogenomic (https://twitter.com/JC_pathogenomic)
 
-Forked from @happykhan/journalbot
 
 # Set up
 
 
 **1. Clone the repo:**
 
-    $ git clone https://github.com/jrjhealey/journalbot.git
+    $ git clone https://github.com/happykhan/journalbot.git
 
 
-**2. Make sure all dependencies are satisfied:**
+**2. Install Python packages:**
 
-    $ python -m pip install -r /path/to/journalbot/requirements.txt
+    $ python -m pip install -r requirements.txt
 
 
 **3. Set environment variables for Twitter authorisation (see https://apps.twitter.com/):**
@@ -52,6 +51,12 @@ complex searches):
      human[organism] AND topoisomerase[protein name]
      Smith J OR Jones K
 
+The Bot will also look in `config/authorlist.txt`. This file should only have author names:
+
+     Alikhan, NF
+     Citizen, Joe
+
+These will automatically have [AU] appended to them. 
 
 
 # Troubleshooting
