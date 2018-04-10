@@ -50,13 +50,7 @@ complex searches):
      nucleus NOT atomic
      human[organism] AND topoisomerase[protein name]
      Smith J OR Jones K
-
-The Bot will also look in `config/authorlist.txt`. This file should only have author names:
-
-     Alikhan, NF
-     Citizen, Joe
-
-These will automatically have [AU] appended to them. 
+     Smith John M [FAU]
 
 
 # Troubleshooting
@@ -67,6 +61,6 @@ Installation is easy with a Miniconda/Anaconda install:
 
 Follow installation prompts. Allow appending to `$PATH` in `.bashrc`.
 
-    $ which python # should yeild: ~/anaconda2/bin/python or similar
+    $ which python # should yield: ~/anaconda2/bin/python or similar
 
 should return a path including miniconda. If not, it's using the wrong python binary still, and you need to alter the order of paths in $PATH.
