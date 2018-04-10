@@ -59,7 +59,7 @@ def main ():
     log_level = logging.INFO
     if args.verbose: 
         log_level = logging.DEBUG
-    logging.basicConfig(level=log_level, format='[%(levelname)s] (%(threadName)-10s) %(message)s',)
+    logging.basicConfig(level=log_level, format='[%(levelname)s] (%(threadName)-10s) %(message)s')
     threads = []     
     logging.info('Starting JournalBot')
     if args.output != None:
