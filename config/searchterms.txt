@@ -96,4 +96,6 @@ Duchene, Sebastian[AU];#phylo
 Octavia, Sophia[FAU]
 Langridge, Gemma C[FAU]
 Katz, Lee[FAU]
+Denham, Emma L[FAU];@Gingermicrobe
+Waterfield, Nicholas R[FAU];@Nick_Waterfield
 Holmes, Edward C[FAU];@edwardcholmes #popgen

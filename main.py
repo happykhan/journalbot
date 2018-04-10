@@ -113,7 +113,7 @@ def get_next_paper(paperlist, CUTOFF):
             handle = Entrez.esearch(db="pubmed", term = search_term, reldate =  CUTOFF) 
             record = Entrez.read(handle)
             handle.close()
-            time.sleep(2) 
+            time.sleep(3) 
             if len(record['IdList']) > 0:
                 entries = record['IdList']
                 chunks = [entries[x:x+20] for x in xrange(0, len(entries), 20)]
