@@ -46,7 +46,7 @@ Parkhill J[AU]
 Petty NK[AU]
 Pevzner PA[AU]
 Rasko, David A[FAU];@RaskoDavid
-Ravel J[AU]
+Ravel, Jacques[FAU]
 Rocha EP[AU]
 Rossen JWA[AU]
 Salzberg, Steven L[FAU]
@@ -57,7 +57,6 @@ Thomson NR[AU]
 Treangen, Todd J[FAU];@traingene
 Tyson, Gene W[FAU]
 Vandamme AM[AU]
-Watson M[AU]
 Weill FX[AU]
 Zerbino, Daniel R[FAU];@dzerbino
 Allaby, Robin G[FAU];#aDNA
@@ -83,8 +82,8 @@ Colijn, Caroline[AU];@CarolineColijn
 Taboada E[AU]
 Wishart, David[FAU]
 Wiens JJ[AU]
-Van Domselaar G[AU]
-Drummond A[AU]
+Van Domselaar, Gary[FAU]
+Drummond, Alexei[FAU]
 Pybus, Oliver G[FAU]
 Bos KI[AU];#aDNA
 Nayfach S[AU];#aDNA

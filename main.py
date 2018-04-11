@@ -138,7 +138,7 @@ def get_next_paper(paperlist, CUTOFF):
                             twit_length = 0
                             if newpaper.get('twitter_handle'):
                                 twit_length = len(newpaper.get('twitter_handle', ''))
-                            newpaper['tweet_title'] = newpaper['full_title'][0:(280 - (twit_length + 30))]
+                            newpaper['tweet_title'] = newpaper['full_title'][0:(280 - (twit_length + 20))]
                             newpaper['score'] = _calculateScore(newpaper, CUTOFF)
                             # Is the paper already there? 
                             if newpaper['score']  > 0 \
@@ -217,7 +217,12 @@ def post_thread():
             paperlist = []
             for page in reversed(page_list):
                 for status in reversed(page):
-                    clean_status = status.text.encode('ascii', 'ignore')
+                    # Tweepy seems to truncate tweets by default. 
+                    if status.truncated:
+                        clean_status = api.get_status(status.id, tweet_mode='extended')\
+                            ._json['full_text'].encode('ascii', 'ignore')
+                    else:
+                        clean_status = status.text.encode('ascii', 'ignore')
                     if title_match.match(clean_status):
                         tweet_title = title_match.match(clean_status).group(2)
                         if not tweet_title in ( item['tweet_title'] for item in paperlist ):
@@ -226,7 +231,8 @@ def post_thread():
             next_paper = get_next_paper(paperlist, args.date_cutoff)
             if next_paper['score'] > 0:
                 try:
-                    api.update_status(_generate_message(next_paper))
+                    message = _generate_message(next_paper)
+                    api.update_status(message)
                     lastTweetTime = datetime.datetime.now()
                 except: 
                     logging.error('Error posting status: %s' %message)
