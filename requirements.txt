@@ -1,4 +1,4 @@
-biopython==1.71
+biopython==1.73
 certifi==2018.1.18
 chardet==3.0.4
 idna==2.6
