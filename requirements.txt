@@ -3,7 +3,7 @@ certifi==2018.11.29
 chardet==3.0.4
 idna==2.8
 numpy==1.16.0
-oauthlib==3.0.0
+oauthlib==3.0.2
 pkg-resources==0.0.0
 PySocks==1.6.8
 requests==2.21.0
