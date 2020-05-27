@@ -3,9 +3,7 @@ Journal Club bot
 
 Source code for the @JC_pathogenomic (https://twitter.com/JC_pathogenomic)
 
-
 # Set up
-
 
 **1. Clone the repo:**
 
