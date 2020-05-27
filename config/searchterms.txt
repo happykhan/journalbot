@@ -1,100 +1,73 @@
-search_term;twitter_handle
-Alikhan NF[AU];@happy_khan
-Beatson, Scott A[FAU];@beatsonlab
+search_term
+Aanensen, David M[FAU]
 Achtman, Mark[FAU]
-Ben Zakour, Nouri L[FAU]
+Alikhan NF[AU]
+Allaby, Robin G[FAU]
+Beatson, Scott A[FAU]
+Bos KI[AU]
 Brinkman, Fiona S[FAU]
-Brisse Sylvain[AU];@sylvainbrisse
-Brown CT[AU]
-Bryant, David[FAU]
-Caccamo M[AU]
-Chikhi, Rayan[AU];@RayanChikhi
-Croucher NJ[AU]
-Darling, Aaron E[FAU];@koadman
-Didelot, Xavier[AU];@XavierDidelot
-Barton, Michael[FAU]
-Quince C[AU]
+Brisse Sylvain[AU]
+Carrico JA[AU]
+Chadhuri, Roy[FAU]
+Chikhi, Rayan[AU]
+Colijn, Caroline[AU]
+Corander, Jukka[FAU]
+Crook, Derrek[AU]
+Dallman TJ[AU]
+Darling, Aaron E[FAU]
+Deng, Xiangyu[AU]
+Didelot, Xavier[AU]
+Dingle KE[AU]
+Drummond, Alexei[FAU]
+Duchene, Sebastian[AU]
 Eddy, Sean R[FAU]
-Edgar RC[AU]
-Eisen, Jonathan A[AU];@phylogenomics
-Eppinger, Mark[FAU]
-Falush, Daniel[AU];@DanielFalush
-Feil EJ[AU];@EpicFeil_
+Falush, Daniel[AU]
+Feil EJ[AU]
 Finlay, Brett B[FAU]
-Foret S[AU]
-Gardy, Jennifer L[FAU];@jennifergardy
+Gardy, Jennifer L[FAU]
 Gilmour, Matthew W[FAU]
-Hanage BW[AU];@BillHanage
+Hanage BW[AU]
 Harmsen, Dag[FAU]
-Harris, Simon R[FAU];@DrSimonHarris
-Hazen TH[AU]
-Henderson, Ian R[FAU];@HendersonLab
-Hinton, Jay C[FAU];@jay_salsa
-Holt KE[AU];@DrKatHolt
-Huson DH[AU]
-Koonin EV[AU]
-Krzywinski M[AU]
-Lipman, David J[FAU]
-Loman, Nicholas J[FAU];@pathogenomenick
-Manning SD[AU]
-McClelland M[AU]
-McNally, Alan[FAU];@alanmcn1
-Myers, Gene[FAU]
-Pace NR[AU]
-Pallen, Mark J[FAU];@mjpallen
+Harris, Simon R[FAU]
+Henderson, Ian R[FAU]
+Hinton, Jay C[FAU]
+Holmes, Edward C[FAU]
+Holt KE[AU]
+Iqbal, Zamin[FAU]
+Jolley, Keith A[AU]
+Katz, Lee[FAU]
+Lan, Ruiting[FAU]
+Langridge, Gemma C[FAU]
+Le Hello, Simon[FAU]
+Loman, Nicholas J[FAU]
+Ludovic, Orlando[AU]
+Maiden MC[AU]
+McNally, Alan[FAU]
+Nayfach S[AU]
+Octavia, Sophia[FAU]
+Page, Andrew J[FAU]
+Pallen, Mark J[FAU]
 Parkhill J[AU]
-Petty NK[AU]
+Pascoe B[AU]
+Peto, Timothy[AU]
 Pevzner PA[AU]
-Rasko, David A[FAU];@RaskoDavid
-Ravel, Jacques[FAU]
+Phillippy, Adam M[FAU]
+Pybus, Oliver G[FAU]
+Quince C[AU]
+Rambaut, Andrew[AU]
+Rasko, David A[FAU]
 Rocha EP[AU]
 Rossen JWA[AU]
 Salzberg, Steven L[FAU]
-Schembri MA[AU]
-Seemann, Torsten[FAU];@torstenseemann
+Seemann, Torsten[FAU]
 Sheppard SK[AU]
-Thomson NR[AU]
-Treangen, Todd J[FAU];@traingene
-Tyson, Gene W[FAU]
-Vandamme AM[AU]
-Weill FX[AU]
-Zerbino, Daniel R[FAU];@dzerbino
-Allaby, Robin G[FAU];#aDNA
-Page, Andrew J[FAU];@andrewjpage
-Wee, Bryan A[FAU];@bawee
-Aanensen, David M[FAU];@daanensen
-Carrico JA[AU];@jacarrico
-Dallman TJ[AU];@TimDallman
-Deng, Xiangyu[AU]
-Chadhuri, Roy[FAU];@RoyChaudhuri
-Phillippy, Adam M[FAU];@aphillippy
-Maiden MC[AU];@MaidenLab
-Jolley, Keith A[AU];@keithajolley
-Crook, Derrek[AU]
-Corander, Jukka[FAU]
-Lan, Ruiting[FAU]
-Le Hello, Simon[FAU]
-Peto, Timothy[AU]
-Ho, Simon Y[FAU]
-Iqbal, Zamin[FAU];@ZaminIqbal
-Ludovic, Orlando[AU];#aDNA
-Colijn, Caroline[AU];@CarolineColijn
 Taboada E[AU]
-Wishart, David[FAU]
-Wiens JJ[AU]
+Thomson NR[AU]
+Treangen, Todd J[FAU]
+Tyson, Gene W[FAU]
 Van Domselaar, Gary[FAU]
-Drummond, Alexei[FAU]
-Pybus, Oliver G[FAU]
-Bos KI[AU];#aDNA
-Nayfach S[AU];#aDNA
-Warinner C[AU];#aDNA
-Dingle KE[AU]
-Pascoe B[AU]
-Rambaut, Andrew[AU];@arambaut
-Duchene, Sebastian[AU];#phylo
-Octavia, Sophia[FAU]
-Langridge, Gemma C[FAU]
-Katz, Lee[FAU]
-Denham, Emma L[FAU];@Gingermicrobe
-Waterfield, Nicholas R[FAU];@Nick_Waterfield
-Holmes, Edward C[FAU];@edwardcholmes #popgen
+Warinner C[AU]
+Waterfield, Nicholas R[FAU]
+Wee, Bryan A[FAU]
+Weill FX[AU]
+Wiens JJ[AU]

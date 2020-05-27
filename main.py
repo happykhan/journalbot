@@ -81,7 +81,7 @@ def main ():
                     match = regex.search(line)
                     ifactor[str(match.group(1)).lower()] = int(match.group(2))
                 except Exception as e:
-                    print 'Could not read line:  %s' % line.strip()
+                    print('Could not read line:  %s' % line.strip())
 
     # Init Posting thread 
     post = threading.Thread(target = post_thread)
@@ -93,7 +93,7 @@ def main ():
         
 def _cleanhtml(raw_html):
     cleanr = re.compile('<.*?>')
-    cleantext = re.sub(cleanr, '', raw_html)
+    cleantext = re.sub(cleanr, '', raw_html.decode('utf-8'))
     return cleantext
 
 def get_next_paper(paperlist, CUTOFF):
@@ -104,50 +104,55 @@ def get_next_paper(paperlist, CUTOFF):
     # Retrieve file saved last update time if available 
     search_terms = {} 
     search_file = os.path.join(args.workdir, 'searchterms.txt')
+    count = 0 
+    total_string = ''
     if os.path.exists(search_file):
         for term in csv.DictReader(open(search_file), delimiter=';'):
-            search_terms[term['search_term']] = term.get('twitter_handle', None)
-    for search_term, twit_handle in search_terms.iteritems():
+            total_string += f' OR ({term["search_term"].strip()})'
+            position = round(len(total_string) / 2500)
+            if search_terms.get(position):
+                search_terms[position] += f" OR ({term['search_term'].strip()})"
+            else:
+                search_terms[position] = f"({term['search_term'].strip()})"
+    entries = [] 
+    for search_string in search_terms.values(): 
         try:
-            logging.info('Fetching papers relating to ' + search_term)
-            handle = Entrez.esearch(db="pubmed", term = search_term, reldate =  CUTOFF) 
+            logging.info('Fetching papers relating to ' + search_string)
+            handle = Entrez.esearch(db="pubmed", term = search_string, reldate =  CUTOFF) 
             record = Entrez.read(handle)
             handle.close()
             time.sleep(3) 
             if len(record['IdList']) > 0:
-                entries = record['IdList']
-                chunks = [entries[x:x+20] for x in xrange(0, len(entries), 20)]
-                for entrylist in chunks:
-                    result = [] 
-                    try:
-                        handle = Entrez.esummary(db="pubmed", id=",".join(entrylist))
-                        result = Entrez.read(handle)
-                        handle.close()
-                    except:
-                        logging.error('Error in loading %s' %entrylist[0])
-                    for r in result:
-                        if not blacklist.get(r['FullJournalName'], None): 
-                            ifact = ifactor.get(r['FullJournalName'].lower(), 0)
-                            newpaper = dict( authors = r['AuthorList'], \
-                                             pmid = str(r['ArticleIds']['pubmed'][0].encode('ascii', 'ignore')), \
-                                             full_title = str(_cleanhtml(r['Title'].encode('ascii', 'ignore'))), \
-                                             journal = r['FullJournalName'], \
-                                             ifactor = ifact, \
-                                             date = r['EPubDate'],
-                                             twitter_handle = twit_handle)
-                            twit_length = 0
-                            if newpaper.get('twitter_handle'):
-                                twit_length = len(newpaper.get('twitter_handle', ''))
-                            newpaper['tweet_title'] = newpaper['full_title'][0:(280 - (twit_length + 20))]
-                            newpaper['score'] = _calculateScore(newpaper, CUTOFF)
-                            # Is the paper already there? 
-                            if newpaper['score']  > 0 \
-                               and newpaper.get('pmid') \
-                               and not newpaper['tweet_title'] in ( item['tweet_title'] for item in paperlist ): 
-                                paperlist.append(newpaper)
+                entries += record['IdList']
         except Exception: 
             traceback.print_exc()
-            logging.error('Failed to fetch ' + search_term + '. Skipping.')
+            logging.error('Failed to fetch ' + search_term + '. Skipping.')                
+    chunks = [entries[x:x+20] for x in range(0, len(entries), 20)]
+    for entrylist in chunks:
+        result = [] 
+        try:
+            handle = Entrez.esummary(db="pubmed", id=",".join(entrylist))
+            result = Entrez.read(handle)
+            handle.close()
+            for r in result:
+                if not blacklist.get(r['FullJournalName'], None): 
+                    ifact = ifactor.get(r['FullJournalName'].lower(), 0)
+                    newpaper = dict( authors = r['AuthorList'], \
+                                        pmid = r['ArticleIds']['pubmed'][0].encode('ascii', 'ignore').decode('utf-8'), \
+                                        full_title = _cleanhtml(r['Title'].encode('ascii', 'ignore')), \
+                                        journal = r['FullJournalName'], \
+                                        ifactor = ifact, \
+                                        date = r['EPubDate'])
+                    twit_length = 0
+                    newpaper['tweet_title'] = newpaper['full_title'][0:(280 - (twit_length + 20))]
+                    newpaper['score'] = _calculateScore(newpaper, CUTOFF)
+                    # Is the paper already there? 
+                    if newpaper['score']  > 0 \
+                        and newpaper.get('pmid') \
+                        and not newpaper['tweet_title'] in ( item['tweet_title'] for item in paperlist ): 
+                        paperlist.append(newpaper)
+        except:
+            logging.error('Error in loading %s' %entrylist[0])                    
     paperlist.sort(key=lambda paper: paper['score'], reverse=True)
     for next_paper in paperlist:
         if next_paper['score'] > 0:
@@ -160,11 +165,6 @@ def _generate_message(next_paper, test=False):
         message +=  ' http://test/%s' %next_paper['pmid']
     else:
         message += ' ' + getShortUrl('http://www.ncbi.nlm.nih.gov/pubmed/%s' %next_paper['pmid'])
-    if next_paper.get('twitter_handle'):
-        join_word = ''
-        if next_paper.get('twitter_handle')[0] == '@':
-            join_word = 'by'
-        message += ' by %s' %next_paper.get('twitter_handle')
     return message
 
 def _calculateScore(paper, CUTOFF):
@@ -191,7 +191,15 @@ def post_thread():
     consumer_secret = os.environ.get('consumer_secret', None)
     access_token = os.environ.get('access_token', None)
     access_token_secret = os.environ.get('access_token_secret', None)
+    if os.path.exists('credentials.json'):
+        json_values = json.load(open('credentials.json'))
+        consumer_key = json_values['consumer_key']
+        consumer_secret = json_values['consumer_secret']
+        access_token = json_values['access_token']
+        access_token_secret = json_values['access_token_secret']
+
     if not (consumer_secret and consumer_key and access_token and access_token_secret):
+        
         logging.error('TOKENS NOT FOUND - Populate the credentials file, then: source ./credentials')
         sys.exit(-1)
 
@@ -223,6 +231,8 @@ def post_thread():
                             ._json['full_text'].encode('ascii', 'ignore')
                     else:
                         clean_status = status.text.encode('ascii', 'ignore')
+                    clean_status = clean_status.decode('utf-8')
+
                     if title_match.match(clean_status):
                         tweet_title = title_match.match(clean_status).group(2)
                         if not tweet_title in ( item['tweet_title'] for item in paperlist ):
@@ -259,25 +269,18 @@ if __name__ == '__main__':
         parser.add_argument('--version', action='version', version='%(prog)s ' + meta.__version__)
         parser.add_argument('-o','--output',action='store',help='output prefix')
         parser.add_argument('-t', '--tinterval', action='store',help='Time interval between tweets (minutes)', type=int,default=300)
-        parser.add_argument ('workdir', action='store', help='Working directory')
+        parser.add_argument ('--workdir', action='store', help='Working directory', default='config')
         parser.add_argument('-d', '--date_cutoff', action='store',help='Post papers in the last X days [def: 30]', type=int,default=30)	
         args = parser.parse_args()
         if args.verbose: 
-            print "Executing @ " + time.asctime()
+            print("Executing @ " + time.asctime())
         main()
         if args.verbose: 
-            print "Ended @ " + time.asctime()
+            print("Ended @ " + time.asctime())
         if args.verbose: 
-            print 'total time in minutes:',
-        if args.verbose: 
-            print (time.time() - start_time) / 60.0
+            print('total time in minutes: ' + time.time() - start_time / 60.0)
         sys.exit(0)
-    except KeyboardInterrupt, e: # Ctrl-C
-        raise e
-    except SystemExit, e: # sys.exit()
-        raise e
-    except Exception, e:
-        print 'ERROR, UNEXPECTED EXCEPTION'
-        print str(e)
+    except Exception:
+        print('ERROR, UNEXPECTED EXCEPTION')
         traceback.print_exc()
         os._exit(1)       
