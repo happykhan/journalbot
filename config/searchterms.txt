@@ -10,28 +10,28 @@ Brisse Sylvain[AU]
 Carrico JA[AU]
 Chadhuri, Roy[FAU]
 Chikhi, Rayan[AU]
-Colijn, Caroline[AU]
-Corander, Jukka[FAU]
+Colijn, Caroline[AU] AND (Microbiology)
+Corander, Jukka[FAU] AND (Microbiology)
 Crook, Derrek[AU]
 Dallman TJ[AU]
-Darling, Aaron E[FAU]
+Darling, Aaron E[FAU] AND (Microbiology)
 Deng, Xiangyu[AU]
-Didelot, Xavier[AU]
+Didelot, Xavier[AU] AND (Microbiology)
 Dingle KE[AU]
 Drummond, Alexei[FAU]
-Duchene, Sebastian[AU]
+Duchene, Sebastian[AU] AND (Microbiology)
 Eddy, Sean R[FAU]
-Falush, Daniel[AU]
-Feil EJ[AU]
+Falush, Daniel[AU] AND (Microbiology)
+Feil EJ[AU] AND (Microbiology)
 Finlay, Brett B[FAU]
 Gardy, Jennifer L[FAU]
 Gilmour, Matthew W[FAU]
-Hanage BW[AU]
+Hanage BW[AU] AND (Microbiology)
 Harmsen, Dag[FAU]
 Harris, Simon R[FAU]
 Henderson, Ian R[FAU]
 Hinton, Jay C[FAU]
-Holmes, Edward C[FAU]
+Holmes, Edward C[FAU] AND (Microbiology)
 Holt KE[AU]
 Iqbal, Zamin[FAU]
 Jolley, Keith A[AU]
@@ -51,9 +51,9 @@ Parkhill J[AU]
 Pascoe B[AU]
 Peto, Timothy[AU]
 Pevzner PA[AU]
-Phillippy, Adam M[FAU]
-Pybus, Oliver G[FAU]
-Quince C[AU]
+Phillippy, Adam M[FAU] AND (Microbiology)
+Pybus, Oliver G[FAU] AND (Microbiology)
+Quince C[AU] 
 Rambaut, Andrew[AU]
 Rasko, David A[FAU]
 Rocha EP[AU]

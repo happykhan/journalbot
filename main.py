@@ -41,6 +41,7 @@ import requests
 import json
 import tweepy
 from Bio import Entrez
+import gspread
 
 epi = "Licence: "+meta.__licence__ +  " by " +meta.__author__ + " <" +meta.__author_email__ + ">"
 
@@ -73,14 +74,14 @@ def main ():
     # Load Journal IF db:
     journalfile = os.path.join(args.workdir,'ifactor.txt')
     if os.path.exists(journalfile):
-        regex = re.compile('^\d+\s([\[A-Za-z&\-\s]+)[ \t]+\d+,?\d+\W+(\d+).\d+')
+        regex = re.compile(r'^\d+\s([\[A-Za-z&\-\s]+)[ \t]+\d+,?\d+\W+(\d+).\d+')
         with open(journalfile,'r') as f:
             for line in f.readlines()[1:]:
                 try: 
                     # 129 Annual Review of Medicine 5,612 12.928 0.0135
                     match = regex.search(line)
                     ifactor[str(match.group(1)).lower()] = int(match.group(2))
-                except Exception as e:
+                except Exception:
                     print('Could not read line:  %s' % line.strip())
 
     # Init Posting thread 
@@ -96,7 +97,7 @@ def _cleanhtml(raw_html):
     cleantext = re.sub(cleanr, '', raw_html.decode('utf-8'))
     return cleantext
 
-def get_next_paper(paperlist, CUTOFF):
+def get_next_paper(paperlist, access_token, CUTOFF, googlesheet=None, googlecred=None):
     Entrez.email = os.environ.get('entrez_email', 'nabil@happykhan.com')
     # Retrieve all papers for each author from file 
     # Use entrez pubmed search
@@ -104,16 +105,23 @@ def get_next_paper(paperlist, CUTOFF):
     # Retrieve file saved last update time if available 
     search_terms = {} 
     search_file = os.path.join(args.workdir, 'searchterms.txt')
-    count = 0 
     total_string = ''
-    if os.path.exists(search_file):
+    # Handle google sheet as well.
+    term_list = [] 
+    if googlecred and googlesheet:
+        gc = gspread.service_account(filename=googlecred)
+        sh = gc.open(googlesheet).sheet1
+        term_list = sh.col_values(1)[1:]
+    elif os.path.exists(search_file):
         for term in csv.DictReader(open(search_file), delimiter=';'):
-            total_string += f' OR ({term["search_term"].strip()})'
-            position = round(len(total_string) / 2500)
-            if search_terms.get(position):
-                search_terms[position] += f" OR ({term['search_term'].strip()})"
-            else:
-                search_terms[position] = f"({term['search_term'].strip()})"
+            term_list.append(term["search_term"].strip())
+    for term in term_list:
+        total_string += f' OR ({term})'
+        position = round(len(total_string) / 2500)
+        if search_terms.get(position):
+            search_terms[position] += f" OR ({term})"
+        else:
+            search_terms[position] = f"({term})"
     entries = [] 
     for search_string in search_terms.values(): 
         try:
@@ -126,7 +134,7 @@ def get_next_paper(paperlist, CUTOFF):
                 entries += record['IdList']
         except Exception: 
             traceback.print_exc()
-            logging.error('Failed to fetch ' + search_term + '. Skipping.')                
+            logging.error('Failed to fetch ' + search_string + '. Skipping.')                
     chunks = [entries[x:x+20] for x in range(0, len(entries), 20)]
     for entrylist in chunks:
         result = [] 
@@ -156,15 +164,15 @@ def get_next_paper(paperlist, CUTOFF):
     paperlist.sort(key=lambda paper: paper['score'], reverse=True)
     for next_paper in paperlist:
         if next_paper['score'] > 0:
-            logging.info(_generate_message(next_paper, test=True))
+            logging.info(_generate_message(next_paper, access_token, test=True))
     return paperlist[0]
 
-def _generate_message(next_paper, test=False):
+def _generate_message(next_paper, access_token, test=False):
     message = next_paper['tweet_title']
     if test:
         message +=  ' http://test/%s' %next_paper['pmid']
     else:
-        message += ' ' + getShortUrl('http://www.ncbi.nlm.nih.gov/pubmed/%s' %next_paper['pmid'])
+        message += ' ' + getShortUrl('http://www.ncbi.nlm.nih.gov/pubmed/%s' %next_paper['pmid'], access_token)
     return message
 
 def _calculateScore(paper, CUTOFF):
@@ -191,12 +199,17 @@ def post_thread():
     consumer_secret = os.environ.get('consumer_secret', None)
     access_token = os.environ.get('access_token', None)
     access_token_secret = os.environ.get('access_token_secret', None)
+    bitly_access_token = os.environ.get('bitly_access_token', None)
+
     if os.path.exists('credentials.json'):
         json_values = json.load(open('credentials.json'))
         consumer_key = json_values['consumer_key']
         consumer_secret = json_values['consumer_secret']
         access_token = json_values['access_token']
         access_token_secret = json_values['access_token_secret']
+        bitly_access_token = json_values['bitly_access_token']
+        google_sheet_name = json_values.get("google_sheet_name", None)
+        google_sheet_credentials = json_values.get("google_sheet_credentials", None)
 
     if not (consumer_secret and consumer_key and access_token and access_token_secret):
         
@@ -217,6 +230,7 @@ def post_thread():
     while (True):
         logging.info('Waiting. Last Tweet at ' + str(lastTweetTime))
         if datetime.datetime.now() > (lastTweetTime + datetime.timedelta(minutes=args.tinterval)):
+            logging.info('Fetching previous tweets')
             page_list = []
             for page in tweepy.Cursor(api.user_timeline, count=200).pages(10):
                 page_list.append(page)
@@ -237,11 +251,12 @@ def post_thread():
                         tweet_title = title_match.match(clean_status).group(2)
                         if not tweet_title in ( item['tweet_title'] for item in paperlist ):
                             paperlist.append(dict(tweet_title = tweet_title, score = 0, posted = True))
+            logging.info('Updated previous tweets')
             logging.info('Last Tweet at ' + str(status.created_at))
-            next_paper = get_next_paper(paperlist, args.date_cutoff)
+            next_paper = get_next_paper(paperlist, bitly_access_token, args.date_cutoff, googlesheet=google_sheet_name, googlecred=google_sheet_credentials)
             if next_paper['score'] > 0:
                 try:
-                    message = _generate_message(next_paper)
+                    message = _generate_message(next_paper, bitly_access_token)
                     api.update_status(message)
                     lastTweetTime = datetime.datetime.now()
                 except: 
@@ -251,8 +266,8 @@ def post_thread():
                 lastTweetTime = datetime.datetime.now()
         time.sleep(600)
 
-def getShortUrl(longurl):
-    query_params = {'access_token': '057b8e5650460b576694ead637996aec16c405f3',
+def getShortUrl(longurl, access_token):
+    query_params = {'access_token': access_token,
                     'longUrl': longurl} 
     endpoint = 'https://api-ssl.bitly.com/v3/shorten'
     response = requests.get(endpoint, params=query_params, verify=False)

@@ -1,5 +1,5 @@
 __name__            = 'journalbot'
-__version__         = '0.0.1'
+__version__         = '2.3.1'
 __description__     = 'Simple journal club twitter bot'
 __author__          = 'Nabil-Fareed Alikhan'
 __author_email__    = 'nabil@happykhan.com'
