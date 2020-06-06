@@ -285,7 +285,7 @@ if __name__ == '__main__':
         parser.add_argument('-o','--output',action='store',help='output prefix')
         parser.add_argument('-t', '--tinterval', action='store',help='Time interval between tweets (minutes)', type=int,default=300)
         parser.add_argument ('--workdir', action='store', help='Working directory', default='config')
-        parser.add_argument('-d', '--date_cutoff', action='store',help='Post papers in the last X days [def: 30]', type=int,default=30)	
+        parser.add_argument('-d', '--date_cutoff', action='store',help='Post papers in the last X days [def: 60]', type=int,default=60)	
         args = parser.parse_args()
         if args.verbose: 
             print("Executing @ " + time.asctime())
