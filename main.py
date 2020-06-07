@@ -97,6 +97,10 @@ def _cleanhtml(raw_html):
     cleantext = re.sub(cleanr, '', raw_html.decode('utf-8'))
     return cleantext
 
+def _statushash(text):
+    text = re.sub(re.compile('[^a-zA-Z0-9]'), '' , text)
+    return text.lower()
+
 def get_next_paper(paperlist, access_token, CUTOFF, googlesheet=None, googlecred=None):
     Entrez.email = os.environ.get('entrez_email', 'nabil@happykhan.com')
     # Retrieve all papers for each author from file 
@@ -143,22 +147,26 @@ def get_next_paper(paperlist, access_token, CUTOFF, googlesheet=None, googlecred
             result = Entrez.read(handle)
             handle.close()
             for r in result:
-                if not blacklist.get(r['FullJournalName'], None): 
-                    ifact = ifactor.get(r['FullJournalName'].lower(), 0)
-                    newpaper = dict( authors = r['AuthorList'], \
-                                        pmid = r['ArticleIds']['pubmed'][0].encode('ascii', 'ignore').decode('utf-8'), \
-                                        full_title = _cleanhtml(r['Title'].encode('ascii', 'ignore')), \
-                                        journal = r['FullJournalName'], \
-                                        ifactor = ifact, \
-                                        date = r['EPubDate'])
-                    twit_length = 0
-                    newpaper['tweet_title'] = newpaper['full_title'][0:(280 - (twit_length + 20))]
-                    newpaper['score'] = _calculateScore(newpaper, CUTOFF)
-                    # Is the paper already there? 
-                    if newpaper['score']  > 0 \
-                        and newpaper.get('pmid') \
-                        and not newpaper['tweet_title'] in ( item['tweet_title'] for item in paperlist ): 
-                        paperlist.append(newpaper)
+                try:
+                    if not blacklist.get(r['FullJournalName'], None): 
+                        ifact = ifactor.get(r['FullJournalName'].lower(), 0)
+                        newpaper = dict( authors = r['AuthorList'], \
+                                            pmid = r['ArticleIds']['pubmed'][0].encode('ascii', 'ignore').decode('utf-8'), \
+                                            full_title = _cleanhtml(r['Title'].encode('ascii', 'ignore')), \
+                                            journal = r['FullJournalName'], \
+                                            ifactor = ifact, \
+                                            date = r['EPubDate'])
+                        twit_length = 0
+                        newpaper['tweet_title'] = newpaper['full_title'][0:(280 - (twit_length + 20))]
+                        newpaper['score'] = _calculateScore(newpaper, CUTOFF)
+                        newpaper['status_hash'] = _statushash(newpaper['tweet_title'])
+                        # Is the paper already there? 
+                        if newpaper['score']  > 0 \
+                            and newpaper.get('pmid') \
+                            and not newpaper['status_hash'] in ( item['status_hash'] for item in paperlist ): 
+                            paperlist.append(newpaper)
+                except:
+                    logging.error('Error in loading %s' %r['Title'].encode('ascii', 'ignore'))
         except:
             logging.error('Error in loading %s' %entrylist[0])                    
     paperlist.sort(key=lambda paper: paper['score'], reverse=True)
@@ -249,8 +257,9 @@ def post_thread():
 
                     if title_match.match(clean_status):
                         tweet_title = title_match.match(clean_status).group(2)
-                        if not tweet_title in ( item['tweet_title'] for item in paperlist ):
-                            paperlist.append(dict(tweet_title = tweet_title, score = 0, posted = True))
+                        status_hash = _statushash(tweet_title)
+                        if not status_hash in ( item['status_hash'] for item in paperlist ):
+                            paperlist.append(dict(tweet_title = tweet_title, score = 0, posted = True, status_hash=status_hash))
             logging.info('Updated previous tweets')
             logging.info('Last Tweet at ' + str(status.created_at))
             next_paper = get_next_paper(paperlist, bitly_access_token, args.date_cutoff, googlesheet=google_sheet_name, googlecred=google_sheet_credentials)
@@ -285,7 +294,7 @@ if __name__ == '__main__':
         parser.add_argument('-o','--output',action='store',help='output prefix')
         parser.add_argument('-t', '--tinterval', action='store',help='Time interval between tweets (minutes)', type=int,default=300)
         parser.add_argument ('--workdir', action='store', help='Working directory', default='config')
-        parser.add_argument('-d', '--date_cutoff', action='store',help='Post papers in the last X days [def: 30]', type=int,default=30)	
+        parser.add_argument('-d', '--date_cutoff', action='store',help='Post papers in the last X days [def: 60]', type=int,default=60)	
         args = parser.parse_args()
         if args.verbose: 
             print("Executing @ " + time.asctime())
