@@ -95,9 +95,12 @@ def main ():
 def _cleanhtml(raw_html):
     cleanr = re.compile('<.*?>')
     cleantext = re.sub(cleanr, '', raw_html.decode('utf-8'))
+    cleantext = re.sub(re.compile('&amp;'), '' , cleantext)
     return cleantext
 
 def _statushash(text):
+    text = re.sub(re.compile('&amp;'), '' , text)
+    text = text.replace('amp', '')
     text = re.sub(re.compile('[^a-zA-Z0-9]'), '' , text)
     return text.lower()
 
@@ -245,8 +248,8 @@ def post_thread():
             # Retrieve previous tweets
             title_match = re.compile('(NEW: |OF NOTE: )?(.+) http.+')
             paperlist = []
-            for page in reversed(page_list):
-                for status in reversed(page):
+            for page in (page_list):
+                for status in (page):
                     # Tweepy seems to truncate tweets by default. 
                     if status.truncated:
                         clean_status = api.get_status(status.id, tweet_mode='extended')\
