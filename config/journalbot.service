@@ -1,0 +1,15 @@
+[Unit]
+Description=JournalBot Service
+Wants=network.target
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+ExecStart=/home/ubuntu/code/journalbot/.venv/bin/python3  /home/ubuntu/code/journalbot/main.py
+Restart=always
+WorkingDirectory=/home/ubuntu/code/journalbot
+
+[Install]
+WantedBy=multi-user.target
+
