@@ -48,6 +48,7 @@ def calculateScore(paper, CUTOFF):
                 pubDate = datetime.datetime.strptime(paper["date"], "%Y %b %d")
             if pubDate > dateCutoff:
                 paper["score"] = 100
+                paper["score"] += (pubDate - dateCutoff).days * 2 
                 if pubDate > boost_date :
                     paper["score"] += 200
                 if int(paper["pub_count"]) > 50:

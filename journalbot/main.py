@@ -104,6 +104,7 @@ def get_next_paper(paperlist, journal_file, search_file, CUTOFF=60):
                             pub_count=pub_count,
                             date=r["EPubDate"],
                         )
+
                         twit_length = 0
                         newpaper["tweet_title"] = newpaper["full_title"][
                             0 : (280 - (twit_length + 20))
@@ -124,7 +125,7 @@ def get_next_paper(paperlist, journal_file, search_file, CUTOFF=60):
                     )
         except:
             logging.error("Error in loading %s" % entrylist[0])
-    paperlist.sort(key=lambda paper: (-paper["score"], paper['date']))
+    paperlist.sort(key=lambda paper: paper["score"], reverse=True)
     paperlist_path = os.path.join(os.path.dirname(journal_file), 'paperlist.tsv')
     out_file = csv.DictWriter(
         open(paperlist_path, "w", newline=""),
