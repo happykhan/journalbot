@@ -1,5 +1,4 @@
-Journal Club bot
-================
+# Journal Club bot
 
 Source code for the @JC_pathogenomic (https://twitter.com/JC_pathogenomic)
 
@@ -9,32 +8,27 @@ Source code for the @JC_pathogenomic (https://twitter.com/JC_pathogenomic)
 
     $ git clone https://github.com/happykhan/journalbot.git
 
-
 **2. Install Python packages:**
 
     $ python -m pip install -r requirements.txt
 
-
 **3. Set environment variables for Twitter authorisation (see https://apps.twitter.com/):**
 
 Create a new twitter app, and generate a `consumer_key`, `consumer_secret`, `access_token`, `access_token_secret`. Export these as Environment Variables.
-Also create an NCBI/Pubmed Entrez email (https://www.ncbi.nlm.nih.gov/account/?back_url=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fgquery%2F).
+Also create an [NCBI/Pubmed Entrez email](https://www.ncbi.nlm.nih.gov/account/?back_url=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fgquery%2F).
 
-E.g. in a script:
+Create a `.env` file in this directory, see `template.env`:
 
-    export consumer_key='xxxxxxxxxxxxxxxxxxxx'
-    export consumer_secret='xxxxxxxxxxxxxxxxxxxx'
-    export access_token='xxxxxxxxxxxxxxxxxxxxx'
-    export access_token_secret='xxxxxxxxxxxxxxxxxxx'
-    export entrez_email='user@email.com'
-
-Then source this file to create the variables:
-
-    $ source /path/to/credentials_file
+    consumer_key='xxx'
+    consumer_secret='xxx'
+    access_token='xxx'
+    access_token_secret='xxx'
+    entrez_email='user@email.com'
 
 # Composing a search term
 
 The bot will search for queries contained within the `config/seartchterms.txt` file. These should be composed in PubMed query syntax
+
 - see https://www.ncbi.nlm.nih.gov/books/NBK3837/#_EntrezHelp_Entrez_Searching_Options_)
 
 An example file would look like (use boolean operators and parentheses to evaluate more
@@ -49,7 +43,6 @@ complex searches):
      human[organism] AND topoisomerase[protein name]
      Smith J OR Jones K
      Smith John M [FAU]
-
 
 # Troubleshooting
 

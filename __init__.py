@@ -1,7 +1,0 @@
-__name__            = 'journalbot'
-__version__         = '2.3.1'
-__description__     = 'Simple journal club twitter bot'
-__author__          = 'Nabil-Fareed Alikhan'
-__author_email__    = 'nabil@happykhan.com'
-__url__             = 'https://github.com/happykhan/journalbot'
-__licence__         = 'GPLv3'

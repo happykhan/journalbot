@@ -12,7 +12,6 @@ Chadhuri, Roy[FAU]
 Chikhi, Rayan[AU]
 Colijn, Caroline[AU] AND (Microbiology)
 Corander, Jukka[FAU] AND (Microbiology)
-Crook, Derrek[AU]
 Dallman TJ[AU]
 Darling, Aaron E[FAU] AND (Microbiology)
 Deng, Xiangyu[AU]
@@ -29,13 +28,13 @@ Gilmour, Matthew W[FAU]
 Hanage BW[AU] AND (Microbiology)
 Harmsen, Dag[FAU]
 Harris, Simon R[FAU]
-Henderson, Ian R[FAU]
+Henderson, Ian R[FAU] AND (Microbiology)
 Hinton, Jay C[FAU]
 Holmes, Edward C[FAU] AND (Microbiology)
 Holt KE[AU]
 Iqbal, Zamin[FAU]
 Jolley, Keith A[AU]
-Katz, Lee[FAU]
+Katz, LS[AU]
 Lan, Ruiting[FAU]
 Langridge, Gemma C[FAU]
 Le Hello, Simon[FAU]
