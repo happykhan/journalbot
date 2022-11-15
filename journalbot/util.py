@@ -54,7 +54,7 @@ def calculateScore(paper, CUTOFF):
                 if int(paper["pub_count"]) > 50:
                     paper["score"] += 100
                 if int(paper["pub_count"]) < 10:
-                    paper["score"] = paper["score"] - 100
+                    paper["score"] = paper["score"] - 150
         except ValueError:
             return 0
     return paper["score"]
