@@ -228,7 +228,7 @@ def post_thread(search_file, journal_file, tinterval, date_cutoff):
         if (
             datetime.datetime.now()
             > (lastTweetTime + datetime.timedelta(minutes=tinterval))
-            or os.path.exists(journal_file)
+            and os.path.exists(journal_file)
         ):
             logging.info("Fetching previous tweets")
             page_list = []
