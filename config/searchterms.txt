@@ -1,50 +1,77 @@
 search_term
-Aanensen, David M[FAU]
-Achtman, Mark[FAU]
-Alikhan NF[AU]
-Allaby, Robin G[FAU]
-Beatson, Scott A[FAU]
-Bos KI[AU]
-Brinkman, Fiona S[FAU]
-Brisse Sylvain[AU]
+Aanensen, David M[FAU] AND (Microbiology)
+Achtman, Mark[FAU] AND (Microbiology)
+Alikhan NF[AU] AND (Microbiology)
+Alison E Mather[AU]
+Anaïs Painset[AU] AND (Microbiology)
+Beatson, Scott A[FAU] AND (Microbiology)
+Boas van der Putten[AU] AND (Microbiology)
+Brinkman, Fiona S[FAU] AND (Microbiology)
+Brisse Sylvain[AU] AND (Microbiology)
 Carrico JA[AU]
 Chadhuri, Roy[FAU]
+Chewapreecha, Claire[AU] AND (Microbiology)
 Chikhi, Rayan[AU]
+Christoph Bock[AU] AND (Microbiology)
 Colijn, Caroline[AU] AND (Microbiology)
+Coll, Francesc[AU] AND (Microbiology)
+Conor J Meehan[AU]
 Corander, Jukka[FAU] AND (Microbiology)
+Cowley, Lauren[AU] AND (Microbiology)
 Dallman TJ[AU]
+Danielle Ingle[AU] AND (Escherichia coli)
 Darling, Aaron E[FAU] AND (Microbiology)
-Deng, Xiangyu[AU]
+David Gally[AU]  AND (Escherichia coli)
+de Oliveira Martins L[AU]
 Didelot, Xavier[AU] AND (Microbiology)
 Dingle KE[AU]
 Drummond, Alexei[FAU]
 Duchene, Sebastian[AU] AND (Microbiology)
 Eddy, Sean R[FAU]
+Eduardo P C Rocha[AU]
+Emma B Hodcroft[AU]  AND (Microbiology)
 Falush, Daniel[AU] AND (Microbiology)
 Feil EJ[AU] AND (Microbiology)
 Finlay, Brett B[FAU]
 Gardy, Jennifer L[FAU]
 Gilmour, Matthew W[FAU]
+Gladstone, Rebecca[AU] AND (Microbiology)
+Grundmann, Hajo[AU] AND (Microbiology)
 Hanage BW[AU] AND (Microbiology)
 Harmsen, Dag[FAU]
 Harris, Simon R[FAU]
 Henderson, Ian R[FAU] AND (Microbiology)
+Hetland, Marit Andrea Klokkhammer[AU] AND (Microbiology)
 Hinton, Jay C[FAU]
 Holmes, Edward C[FAU] AND (Microbiology)
 Holt KE[AU]
 Iqbal, Zamin[FAU]
 Jolley, Keith A[AU]
 Katz, LS[AU]
+Karen Miga[AU] AND (Microbiology)
+Kelley Harris[AU] AND (Microbiology)
+Konstantinos T Konstantinidis[AU]  AND (Microbiology)
+Koopmans, Marion[AU] AND (Microbiology)
 Lan, Ruiting[FAU]
+Landgraff, Chrystal[AU] AND (Microbiology)
 Langridge, Gemma C[FAU]
+Lanza, Val F[AU] AND (Microbiology)
 Le Hello, Simon[FAU]
+Lees, John[AU] AND (Microbiology)
 Loman, Nicholas J[FAU]
+Lucila Ohno-Machado[AU] AND (Microbiology)
 Ludovic, Orlando[AU]
 Maiden MC[AU]
+Marco R Oggioni[AU] AND (Microbiology)
 McNally, Alan[FAU]
+Munk, Patrick[AU] AND (Microbiology)
 Nayfach S[AU]
+Nicole E Wheeler[AU]
 Octavia, Sophia[FAU]
+Okeke, Iruka[AU] AND (Microbiology)
+Olivier Tenaillon[AU] AND (Escherichia coli)
 Page, Andrew J[FAU]
+Pall Melsted[AU] AND (Microbiology)
 Pallen, Mark J[FAU]
 Parkhill J[AU]
 Pascoe B[AU]
@@ -52,21 +79,33 @@ Peto, Timothy[AU]
 Pevzner PA[AU]
 Phillippy, Adam M[FAU] AND (Microbiology)
 Pybus, Oliver G[FAU] AND (Microbiology)
-Quince C[AU] 
+Quince C[AU]
+Rafal Mostowy[AU] AND (Microbiology)
 Rambaut, Andrew[AU]
 Rasko, David A[FAU]
-Rocha EP[AU]
+Reuter, Sandra[AU] AND (Microbiology)
+Robert A Kingsley[AU]
 Rossen JWA[AU]
-Salzberg, Steven L[FAU]
+Salzberg, Steven L[FAU] AND (Microbiology)
+search_term
 Seemann, Torsten[FAU]
+Seth-Smith, Helena[AU] AND (Microbiology)
 Sheppard SK[AU]
+Sion Bayliss[AU] AND (Microbiology)
+Smita Krishnaswamy[AU] AND (Microbiology)
 Taboada E[AU]
+Tami Lieberman[AU] AND (Microbiology)
+Tandy Warnow[AU] AND (Microbiology)
+Tanja Stadler[AU] AND (Microbiology)
 Thomson NR[AU]
+Titus Brown[AU] AND (Microbiology)
+Tjibbe Donker[AU] AND (Microbiology)
 Treangen, Todd J[FAU]
 Tyson, Gene W[FAU]
 Van Domselaar, Gary[FAU]
-Warinner C[AU]
 Waterfield, Nicholas R[FAU]
 Wee, Bryan A[FAU]
 Weill FX[AU]
+Weinert, Lucy[AU] AND (Microbiology)
 Wiens JJ[AU]
+Wyres, Kelly[AU] AND (Microbiology)
