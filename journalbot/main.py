@@ -39,7 +39,7 @@ import time
 import re
 from Bio import Entrez
 from journalbot.util import generate_message, statushash, calculateScore, cleanhtml, load_credentials
-
+import pytz
 
 def get_next_paper(paperlist, journal_file, search_file, CUTOFF=60):
     Entrez.email = os.environ.get("entrez_email", "nabil@happykhan.com")
@@ -226,7 +226,7 @@ def post_thread(search_file, journal_file, tinterval, date_cutoff):
     while True:
         logging.info("Waiting. Last Tweet at " + str(lastTweetTime))
         if (
-            datetime.datetime.now()
+            pytz.utc.localize(datetime.datetime.now())
             > (lastTweetTime + datetime.timedelta(minutes=tinterval))
             and os.path.exists(journal_file)
         ):
