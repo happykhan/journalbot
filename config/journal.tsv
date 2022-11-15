@@ -1,759 +1,1060 @@
 name	count
-iscience	3
-proceedings of the national academy of sciences of the united states of america	158
-the journal of infectious diseases	59
-bioinformatics (oxford, england)	131
-virus evolution	31
-international journal of food microbiology	15
-viruses	39
-children (basel, switzerland)	1
-emerging infectious diseases	124
-elife	41
-nucleic acids research	126
-bmc genomics	113
-nature	118
-clinical microbiology and infection : the official publication of the european society of clinical microbiology and infectious diseases	17
-plos genetics	79
-applied and environmental microbiology	97
-microbiology resource announcements	34
-nature microbiology	84
-journal of clinical microbiology	243
-the lancet. microbe	23
-parasites & vectors	2
-microbial genomics	240
-virology	40
-nature chemical biology	2
-international journal of systematic and evolutionary microbiology	31
-open forum infectious diseases	7
-g3 (bethesda, md.)	11
-microbiology spectrum	16
-mbio	108
-peerj	45
-clinical infectious diseases : an official publication of the infectious diseases society of america	80
-gut microbes	10
-plos neglected tropical diseases	102
-entropy (basel, switzerland)	1
-access microbiology	4
-bmc infectious diseases	16
-genome medicine	42
-transactions of the royal society of tropical medicine and hygiene	3
-philosophical transactions of the royal society of london. series b, biological sciences	29
-microbiology (reading, england)	79
-emerging microbes & infections	20
-science (new york, n.y.)	111
-scientific reports	134
-nar genomics and bioinformatics	5
-plos pathogens	111
+iscience	4
+proceedings of the national academy of sciences of the united states of america	62
+bioinformatics (oxford, england)	65
+international journal of food microbiology	9
+elife	44
+nucleic acids research	69
+mbio	87
+bmc genomics	51
+plos genetics	46
+nature microbiology	94
+microbial genomics	250
+international journal of systematic and evolutionary microbiology	27
+open forum infectious diseases	9
+g3 (bethesda, md.)	8
+science (new york, n.y.)	59
+microbiology spectrum	18
+clinical infectious diseases : an official publication of the infectious diseases society of america	72
+gut microbes	7
+plos neglected tropical diseases	71
+access microbiology	5
+philosophical transactions of the royal society of london. series b, biological sciences	13
+microbiology (reading, england)	31
+nature communications	147
+nature	53
+bmc infectious diseases	20
+genome biology and evolution	41
+plos pathogens	63
+virus evolution	32
+nature biotechnology	30
+scientific reports	149
 journal of infection in developing countries	4
-genome biology	97
-nature communications	142
 the lancet regional health. western pacific	5
-fems microbiology reviews	12
-euro surveillance : bulletin europeen sur les maladies transmissibles = european communicable disease bulletin	52
-molecular biology and evolution	101
+the lancet. microbe	28
+molecular biology and evolution	66
 communications biology	14
-proceedings. biological sciences	36
-microbial drug resistance (larchmont, n.y.)	7
-journal of virology	109
-vaccine	21
-environmental microbiology	35
-current biology : cb	24
-annals of medicine	1
-international journal of biological sciences	1
+scientific data	5
+viruses	51
+environmental microbiology	42
+current biology : cb	23
 journal of clinical anesthesia	2
-the journal of general virology	51
-transplantation	3
 canada communicable disease report = releve des maladies transmissibles au canada	2
-science translational medicine	8
-nature reviews. genetics	14
-water research	11
-bmj (clinical research ed.)	5
-frontiers in genetics	5
-nature methods	22
-particle and fibre toxicology	1
-frontiers in medicine	1
-plos one	274
-frontiers in oncology	1
-cell	30
-genome research	109
-plos computational biology	63
-western pacific surveillance and response journal : wpsar	4
-frontiers in immunology	9
-the journal of infection	20
+science translational medicine	11
+microorganisms	20
+water research	10
+frontiers in genetics	4
+nature methods	8
+pathogens (basel, switzerland)	7
+frontiers in medicine	6
+cell host & microbe	11
+plos one	147
+plos computational biology	42
 life science alliance	2
-the journal of antimicrobial chemotherapy	104
-metabolites	1
-plos medicine	14
-environment international	2
-gigascience	22
-international journal of molecular sciences	4
-current opinion in microbiology	23
-nature ecology & evolution	14
-frontiers in cellular and infection microbiology	18
-msphere	21
-the science of the total environment	11
-bmc cancer	2
-the isme journal	58
-briefings in bioinformatics	14
-journal of bioinformatics and computational biology	1
-msystems	24
-journal of theoretical biology	11
-organic letters	1
+plos medicine	8
+environment international	3
+journal of clinical tuberculosis and other mycobacterial diseases	1
+nar genomics and bioinformatics	7
+nature ecology & evolution	6
+briefings in bioinformatics	8
+plos biology	23
 equine veterinary journal	2
-medrxiv : the preprint server for health sciences	7
+medrxiv : the preprint server for health sciences	8
 research square	3
-nature biotechnology	51
-journal of visualized experiments : jove	4
-journal of medical microbiology	36
-journal of global antimicrobial resistance	10
-trends in ecology & evolution	6
-science advances	6
-clinical microbiology reviews	8
+journal of medical microbiology	27
+gut pathogens	3
+gigascience	14
+science advances	5
 advances in microbial physiology	1
-the lancet. global health	2
-european journal of clinical microbiology & infectious diseases : official publication of the european society of clinical microbiology	6
-methods in molecular biology (clifton, n.j.)	21
-antimicrobial agents and chemotherapy	80
-worldviews on evidence-based nursing	2
-international journal of infectious diseases : ijid : official publication of the international society for infectious diseases	5
-wellcome open research	20
-plos biology	33
-the lancet. infectious diseases	50
-cell host & microbe	13
-nature genetics	69
-current opinion in virology	6
-faculty reviews	1
-the new phytologist	4
-cell systems	6
-research in microbiology	20
-rna (new york, n.y.)	6
-annual review of biomedical data science	1
-ieee transactions on visualization and computer graphics	1
-statistics in medicine	2
-frontiers in microbiology	121
-the pediatric infectious disease journal	5
-infection prevention in practice	1
-the lancet. public health	2
-genomics	7
-systematic biology	43
-tuberculosis (edinburgh, scotland)	3
-epidemiology and infection	20
-infection, genetics and evolution : journal of molecular epidemiology and evolutionary genetics in infectious diseases	45
-algorithms for molecular biology : amb	6
-innovation (cambridge (mass.))	1
-journal of evolutionary biology	5
-the lancet. digital health	1
-bmj open	10
-frontiers in veterinary science	6
-infectious diseases now	2
-biomaterials	1
-journal of cystic fibrosis : official journal of the european cystic fibrosis society	3
-biomaterials translational	2
-trends in microbiology	55
-ebiomedicine	9
-journal of the optical society of america. a, optics, image science, and vision	1
-molecular microbiology	55
-one health (amsterdam, netherlands)	1
-advanced science (weinheim, baden-wurttemberg, germany)	1
-annual review of food science and technology	2
-pathogens (basel, switzerland)	5
-microbial ecology	2
-veterinary microbiology	18
-virologica sinica	4
-journal of parkinson's disease	1
-the embo journal	2
-microorganisms	16
-journal of bacteriology	130
-journal of tropical pediatrics	1
-the journal of allergy and clinical immunology	3
-lancet (london, england)	17
-annual review of genetics	3
-food microbiology	9
-biorxiv : the preprint server for biology	7
-acs infectious diseases	3
-the journal of biological chemistry	16
-microbiome	23
-cell surface (amsterdam, netherlands)	1
-biophysical journal	1
-tropical medicine and health	1
-journal of cellular physiology	1
-nature medicine	12
-	2
-archives of cardiovascular diseases	1
-journal of immunology (baltimore, md. : 1950)	11
-applications in plant sciences	1
-journal of photochemistry and photobiology. b, biology	1
-bmc evolutionary biology	17
-revista do instituto de medicina tropical de sao paulo	3
-stem cells international	3
+emerging microbes & infections	22
+european journal of clinical microbiology & infectious diseases : official publication of the european society of clinical microbiology	8
+euro surveillance : bulletin europeen sur les maladies transmissibles = european communicable disease bulletin	61
+the lancet. global health	4
+virulence	3
+journal of clinical rheumatology : practical reports on rheumatic & musculoskeletal diseases	1
+nature genetics	31
+life (basel, switzerland)	1
+cell systems	5
+journal of clinical microbiology	137
+science immunology	6
+cell	25
+the pediatric infectious disease journal	4
+genome biology	38
 epidemics	7
-the journal of molecular diagnostics : jmd	3
-ima fungus	1
-journal of cellular and molecular medicine	1
-the lancet. gastroenterology & hepatology	2
-the lancet. respiratory medicine	5
-theranostics	1
-nanomaterials (basel, switzerland)	1
-connective tissue research	2
-annals of family medicine	1
-scientific data	6
-microbiologyopen	2
-nature reviews. microbiology	50
-vaccines	1
-the new england journal of medicine	20
-international journal of paleopathology	1
-bmc bioinformatics	50
-acs applied materials & interfaces	3
-cold spring harbor perspectives in medicine	1
+the lancet. public health	2
+frontiers in cellular and infection microbiology	20
+methods in molecular biology (clifton, n.j.)	16
+systematic biology	26
+epidemiology and infection	13
+algorithms for molecular biology : amb	4
+innovation (cambridge (mass.))	1
+western pacific surveillance and response journal : wpsar	2
+bmj open	18
+research in microbiology	13
+the journal of allergy and clinical immunology	4
+emerging infectious diseases	85
+international journal of infectious diseases : ijid : official publication of the international society for infectious diseases	6
+genome medicine	41
+infection, genetics and evolution : journal of molecular epidemiology and evolutionary genetics in infectious diseases	27
+frontiers in immunology	12
+frontiers in microbiology	122
+journal of cystic fibrosis : official journal of the european cystic fibrosis society	2
+wellcome open research	21
+vaccine	20
+trends in microbiology	20
+applied and environmental microbiology	63
+the journal of antimicrobial chemotherapy	99
+msphere	25
+proceedings. biological sciences	21
+journal of clinical virology : the official publication of the pan american society for clinical virology	10
+the journal of neuroscience : the official journal of the society for neuroscience	1
+antimicrobial agents and chemotherapy	50
 f1000research	9
-the journal of maternal-fetal & neonatal medicine : the official journal of the european association of perinatal medicine, the federation of asia and oceania perinatal societies, the international society of perinatal obstetricians	1
-frontiers in public health	4
-journal of open source software	1
-diagnostic microbiology and infectious disease	6
-genome biology and evolution	44
-cancer medicine	1
-the european respiratory journal	2
-cell reports	8
+peerj	35
+jama	2
+clinical science (london, england : 1979)	1
+genome research	50
+brain communications	1
+lasers in medical science	1
+the journal of biological chemistry	8
+the isme journal	53
+the journal of clinical investigation	3
+genomics	3
+the journal of infection	24
+data in brief	2
+bmc evolutionary biology	12
+clinical microbiology reviews	8
+bmc biology	8
+veterinary microbiology	15
+clinical microbiology and infection : the official publication of the european society of clinical microbiology and infectious diseases	21
+the lancet. respiratory medicine	3
+swiss medical weekly	3
+annals of family medicine	1
+jci insight	1
+tuberculosis (edinburgh, scotland)	3
+microbiology resource announcements	35
+the journal of general virology	17
+journal of molecular biology	4
+cell reports	9
+frontiers in public health	10
+virology	12
+msystems	27
 sexual health	1
-international journal of nanomedicine	1
-journal of oncology	1
-medical science monitor : international medical journal of experimental and clinical research	1
-poultry science	1
-npj science of food	1
-annual review of microbiology	5
-bmc medical ethics	1
-infection and immunity	73
-journal of cancer	1
-journal of applied microbiology	7
-international journal of antimicrobial agents	10
-journal of wildlife diseases	4
-bioessays : news and reviews in molecular, cellular and developmental biology	4
-annual review of virology	1
-evolutionary applications	3
-environmental pollution (barking, essex : 1987)	1
-helicobacter	1
-analytical chemistry	4
-bioscience reports	1
-ieee transactions on neural networks and learning systems	1
-nature plants	1
-bmc biology	20
-plasmid	7
-faseb journal : official publication of the federation of american societies for experimental biology	4
-journal of periodontal research	2
-journal of clinical periodontology	3
+the science of the total environment	13
+bmc microbiology	24
+nature reviews. microbiology	23
+journal of applied microbiology	2
+journal of wildlife diseases	2
+the lancet. infectious diseases	39
+evolutionary applications	2
+analytical chemistry	1
+ebiomedicine	15
+international journal of std & aids	1
+current opinion in hiv and aids	2
+plasmid	3
+faseb journal : official publication of the federation of american societies for experimental biology	3
+gastroenterology	5
+acs nano	1
 ecological applications : a publication of the ecological society of america	1
-virulence	2
-tropical medicine & international health : tm & ih	2
-journal of food protection	3
-faseb bioadvances	1
-genetics	22
-journal of the american board of family medicine : jabfm	1
-blood	2
-molecular ecology	30
-bmc musculoskeletal disorders	2
+the journal of infectious diseases	43
+journal of food protection	2
+virologica sinica	3
+journal of the american board of family medicine : jabfm	2
+bmc bioinformatics	19
 jmm case reports	1
-molecular neurobiology	1
-environmental research	1
-jama	4
-ticks and tick-borne diseases	5
-oxidative medicine and cellular longevity	1
-antibiotics (basel, switzerland)	1
+future microbiology	5
+ticks and tick-borne diseases	4
+antibiotics (basel, switzerland)	3
 the american journal of tropical medicine and hygiene	8
-journal of computational biology : a journal of computational molecular cell biology	16
-fems microbiology letters	22
-zhongguo xiu fu chong jian wai ke za zhi = zhongguo xiufu chongjian waike zazhi = chinese journal of reparative and reconstructive surgery	1
-microbes and infection	7
-standards in genomic sciences	3
-proteomics	5
-genome announcements	48
-evidence-based complementary and alternative medicine : ecam	2
-database : the journal of biological databases and curation	2
-virus research	7
-oncotarget	1
-open biology	3
-sexually transmitted infections	5
-parkinsonism & related disorders	1
-antonie van leeuwenhoek	1
-pigment cell & melanoma research	1
-trends in genetics : tig	6
-plant biotechnology journal	2
-pathogens and disease	10
-the febs journal	1
-nature protocols	9
-journal of the american chemical society	3
-clinical and vaccine immunology : cvi	6
-american journal of respiratory and critical care medicine	2
-biochemical and biophysical research communications	4
-future microbiology	6
-journal of proteomics	2
-bmc microbiology	53
-annals of neurology	1
-international journal of mycobacteriology	2
-annals of the new york academy of sciences	2
-virology journal	3
-gut pathogens	4
-computational biology and chemistry	1
+journal of computational biology : a journal of computational molecular cell biology	4
+journal of animal science	1
+memorias do instituto oswaldo cruz	1
+fems microbiology letters	8
+cell stem cell	1
+microbiome	25
+tropical medicine and infectious disease	1
+microbes and infection	5
+journal of theoretical biology	6
+transplantation	3
+food microbiology	3
+microbial biotechnology	4
+sexually transmitted infections	3
+the journal of investigative dermatology	2
+parkinsonism & related disorders	2
+open biology	2
+antonie van leeuwenhoek	4
+genome announcements	24
+molecular ecology	11
+microbial pathogenesis	2
+genetics	14
+current opinion in virology	6
+the embo journal	3
+veterinary research	3
+journal of virology	37
 world journal of emergency surgery : wjes	1
 the canadian journal of infectious diseases & medical microbiology = journal canadien des maladies infectieuses et de la microbiologie medicale	1
-journal of molecular biology	8
-annual review of genomics and human genetics	2
-gut	5
-the lancet. hiv	1
-methods in ecology and evolution	3
-platelets	1
-comparative biochemistry and physiology. part d, genomics & proteomics	1
-nephrology nursing journal : journal of the american nephrology nurses' association	1
-journal of clinical virology : the official publication of the pan american society for clinical virology	1
-foodborne pathogens and disease	14
-environmental microbiology reports	9
-cold spring harbor perspectives in biology	3
+molecular microbiology	14
+methods in ecology and evolution	2
+biology direct	1
+the annals of applied statistics	1
+bmc medicine	4
+journal of bacteriology	31
+infection and immunity	41
+cold spring harbor perspectives in biology	1
+interdisciplinary topics in gerontology and geriatrics	1
+environmental microbiology reports	4
 neuron	1
-journal of epidemiology and global health	1
 comparative immunology, microbiology and infectious diseases	1
-health information science and systems	1
-ecology letters	14
-berliner und munchener tierarztliche wochenschrift	1
-embo molecular medicine	6
-journal of virological methods	2
+rna (new york, n.y.)	5
 journal of biomedical semantics	1
-journal of human evolution	3
-evolutionary bioinformatics online	3
-the biochemical journal	4
-cellular microbiology	6
-bmc research notes	3
-fems microbiology ecology	3
-international journal of medical microbiology : ijmm	16
-international journal of microbiology	1
-health technology assessment (winchester, england)	2
-the journal of experimental medicine	4
+current opinion in microbiology	11
+lancet (london, england)	9
+cellular microbiology	3
+fems microbiology ecology	2
+international journal of medical microbiology : ijmm	10
+health technology assessment (winchester, england)	1
+gut	3
+foodborne pathogens and disease	4
+molecular cell	1
 annual review of biophysics	1
-european journal of immunology	4
-journal of the royal society, interface	1
-glycobiology	2
-fatigue : biomedicine, health & behavior	1
-cell research	1
-journal of microbiological methods	16
-jama internal medicine	2
+journal of the royal society, interface	2
+virology journal	3
+the new england journal of medicine	16
+fems microbiology reviews	6
 biometrics	1
 rna biology	3
-nature nanotechnology	1
-carbohydrate research	1
-microbial informatics and experimentation	1
-annals of translational medicine	1
-plants (basel, switzerland)	1
-ecosal plus	2
-journal of molecular evolution	11
-current opinion in gastroenterology	1
-case reports in infectious diseases	1
-canadian journal of microbiology	9
-advances in experimental medicine and biology	7
-american journal of clinical pathology	2
-embo reports	2
-ecology and evolution	3
-the journal of school nursing : the official publication of the national association of school nurses	1
-new south wales public health bulletin	1
-genes	5
-journal of forensic nursing	1
-journal of experimental botany	1
+embo molecular medicine	2
+journal of microbiological methods	3
+journal of molecular evolution	2
+nature reviews. genetics	6
+international journal of antimicrobial agents	10
+nature reviews. cancer	1
+expert review of clinical immunology	3
+microbial drug resistance (larchmont, n.y.)	3
 journal of integrative bioinformatics	1
 current protein & peptide science	1
-expert review of vaccines	2
 microbes and environments	1
-fems immunology and medical microbiology	1
-annals of anatomy = anatomischer anzeiger : official organ of the anatomische gesellschaft	1
-current opinion in biotechnology	2
-respiratory research	1
-the journal of physical chemistry. a	3
-bmc systems biology	2
-source code for biology and medicine	2
-scandinavian journal of infectious diseases	1
-archives of virology	1
-journal of medical entomology	1
-proteins	2
-genome informatics. international conference on genome informatics	1
-journal of translational medicine	1
-cellular immunology	1
-expert review of medical devices	1
-american journal of epidemiology	1
-mikrobiyoloji bulteni	1
-the journal of clinical investigation	3
-molecular ecology resources	2
-nature structural & molecular biology	1
-medical mycology	1
-trends in immunology	2
-gastroenterology	6
-aids research and human retroviruses	3
-systematic and applied microbiology	3
-the journal of hospital infection	4
-eukaryotic cell	2
-f1000 biology reports	2
-bulletin of mathematical biology	1
-internal medicine (tokyo, japan)	1
-bmc genetics	2
-microbiology and molecular biology reviews : mmbr	2
-molecular systems biology	1
-amia ... annual symposium proceedings. amia symposium	1
-comparative and functional genomics	1
-international journal of health geographics	1
-journal of pharmaceutical and biomedical analysis	1
-body image	1
-methods in enzymology	3
-trends in biotechnology	1
-wormbook : the online review of c. elegans biology	1
-genes and immunity	2
-biology letters	8
-medecine sciences : m/s	3
-immunology letters	1
-se pu = chinese journal of chromatography	1
-microbial pathogenesis	2
-journal of leukocyte biology	1
-veterinary journal (london, england : 1997)	1
-plant methods	1
-protein science : a publication of the protein society	3
-cladistics : the international journal of the willi hennig society	1
-journal of agricultural and food chemistry	1
-tag. theoretical and applied genetics. theoretische und angewandte genetik	1
-biochimica et biophysica acta	2
-molecular phylogenetics and evolution	15
-pathology	1
-veterinary immunology and immunopathology	1
-genes & development	1
-physiological genomics	1
-american journal of physiology. cell physiology	1
-fungal genetics and biology : fg & b	1
-advances in parasitology	2
-advances in virus research	1
-febs letters	3
-genome	1
-plant physiology	1
-letters in applied microbiology	1
-lipids	1
-molecular biotechnology	1
-methods in molecular medicine	3
-clinical and diagnostic laboratory immunology	3
-acta crystallographica. section d, biological crystallography	1
+fems immunology and medical microbiology	2
+bioessays : news and reviews in molecular, cellular and developmental biology	4
+	2
 journal of medical virology	3
-nursing spectrum (d.c./baltimore metro ed.)	1
-biochemical society transactions	2
-american pharmacy	1
-journal of general microbiology	1
-journal of the american pharmaceutical association. american pharmaceutical association	2
+the journal of physical chemistry. a	2
+microbiology and molecular biology reviews : mmbr	1
+proteins	1
+trends in ecology & evolution	1
+genome informatics. international conference on genome informatics	1
+molecular ecology resources	2
+medical mycology	1
+ieee/acm transactions on computational biology and bioinformatics	1
+systematic and applied microbiology	12
+the journal of hospital infection	3
+eukaryotic cell	1
+bulletin of mathematical biology	1
+bmc genetics	2
+amia ... annual symposium proceedings. amia symposium	1
+research in veterinary science	1
+annual review of genetics	2
+american journal of respiratory and critical care medicine	3
+wormbook : the online review of c. elegans biology	1
+biochimie	1
+veterinary immunology and immunopathology	1
+journal of experimental zoology. part b, molecular and developmental evolution	1
+biological procedures online	1
+journal of leukocyte biology	1
+trends in genetics : tig	3
+journal of immunology (baltimore, md. : 1950)	5
+cladistics : the international journal of the willi hennig society	1
+molecular phylogenetics and evolution	5
+genes & development	1
+advances in parasitology	1
+plant physiology	1
+the veterinary record	1
+letters in applied microbiology	2
+annual review of microbiology	1
+current opinion in infectious diseases	1
+andrologia	1
+the world allergy organization journal	1
+hrb open research	1
+journal of orthodontics	4
 frontiers in bioinformatics	1
-global change biology	1
-evolution; international journal of organic evolution	34
-infection control and hospital epidemiology	2
-palliative medicine	1
+genes	7
+jmir medical informatics	2
+injury prevention : journal of the international society for child and adolescent injury prevention	1
+global change biology	5
+journal of shoulder and elbow surgery	3
+cureus	12
+digital health	1
+iranian journal of public health	1
+journal of community genetics	3
+journal of psychosomatic research	2
+jmir formative research	1
+evolution; international journal of organic evolution	8
+american journal of epidemiology	1
+international journal of pharmaceutics	1
+parasites & vectors	5
+infection control and hospital epidemiology	4
+nutrition and health	1
+healthcare (basel, switzerland)	1
+evidence-based complementary and alternative medicine : ecam	1
+surgical neurology international	2
+journal of virus eradication	1
+diabetes research and clinical practice	3
+palliative medicine	2
+headache	6
+journal of stomatology, oral and maxillofacial surgery	2
+the journal of the american academy of orthopaedic surgeons	1
+ejhaem	1
+journal of pharmacy & bioallied sciences	1
 cell reports. medicine	1
+journal of personalized medicine	2
+la medicina del lavoro	2
 nanotechnology	1
+journal of graduate medical education	1
+journal of pediatric urology	2
+human vaccines & immunotherapeutics	2
+journal of public affairs	1
+f&s reports	1
+journal of vascular surgery	3
 the lancet regional health. europe	2
+journal of alzheimer's disease : jad	2
 engineering (beijing, china)	1
-chemical reviews	1
+yakugaku zasshi : journal of the pharmaceutical society of japan	1
+journal of water and health	1
+journal of strength and conditioning research	1
+biomedicines	2
+aesthetic plastic surgery	5
+journal of molecular neuroscience : mn	1
+the annals of pharmacotherapy	5
+multiple sclerosis and related disorders	3
+italian journal of pediatrics	1
+journal of the academy of consultation-liaison psychiatry	1
+pancreas	2
 computational and structural biotechnology journal	1
-international journal of environmental research and public health	1
+journal of drugs in dermatology : jdd	3
+lung	1
+international journal of environmental research and public health	8
 comptes rendus biologies	1
-journal of contaminant hydrology	13
-human vaccines & immunotherapeutics	1
-the cochrane database of systematic reviews	1
+computers in biology and medicine	1
+journal of contaminant hydrology	4
+journal of neurological surgery. part a, central european neurosurgery	1
+international journal of paediatric dentistry	2
+rheumatology international	4
+nature medicine	12
+international journal of prisoner health	1
+journal of environmental management	1
+revista do instituto de medicina tropical de sao paulo	2
+arthroscopy, sports medicine, and rehabilitation	4
+systematic reviews	2
+the international journal of lower extremity wounds	1
+aerospace medicine and human performance	1
+health informatics journal	1
+frontiers in psychiatry	2
+natural products and bioprospecting	3
+environmental science & technology	6
+the american surgeon	1
+frontiers in pharmacology	1
+the cochrane database of systematic reviews	3
+chemosphere	3
 archives de pediatrie : organe officiel de la societe francaise de pediatrie	1
 infectious diseases of poverty	1
-molecular & cellular proteomics : mcp	10
+molecular & cellular proteomics : mcp	2
+children (basel, switzerland)	1
+epilepsy & behavior : e&b	1
+human reproduction update	1
+computer methods and programs in biomedicine	1
+cornea	1
+jmir medical education	5
+cpt: pharmacometrics & systems pharmacology	1
 eclinicalmedicine	1
-international journal of biological macromolecules	2
-multiple sclerosis and related disorders	2
-pharmaceuticals (basel, switzerland)	1
-foods (basel, switzerland)	1
-american journal of otolaryngology	1
+journal of immunology research	1
+clinical rheumatology	4
+international journal of molecular sciences	5
+journal of nursing management	1
+the thoracic and cardiovascular surgeon	3
+biomed research international	3
+acta ophthalmologica	2
+respiratory research	1
+science & medicine in football	1
+journal of international society of preventive & community dentistry	1
+pharmaceuticals (basel, switzerland)	2
+foods (basel, switzerland)	2
+nursing open	2
+antimicrobial resistance and infection control	7
+bmj (clinical research ed.)	3
+research involvement and engagement	1
+frontiers in surgery	1
+health promotion international	1
+jama dermatology	2
+archivio italiano di urologia, andrologia : organo ufficiale [di] societa italiana di ecografia urologica e nefrologica	1
+asian pacific journal of cancer prevention : apjcp	2
+zhongguo zhong yao za zhi = zhongguo zhongyao zazhi = china journal of chinese materia medica	2
+ecology letters	5
+diagnostics (basel, switzerland)	1
+jmir cancer	2
+particle and fibre toxicology	1
+journal of voice : official journal of the voice foundation	1
 multiple sclerosis (houndmills, basingstoke, england)	1
-the journal of prosthetic dentistry	3
-journal of prosthodontic research	3
-international journal of cancer	1
+korean journal of anesthesiology	1
+journal of global antimicrobial resistance	12
+annals of translational medicine	3
+pediatric nephrology (berlin, germany)	5
+the british journal of oral & maxillofacial surgery	1
+journal of midwifery & women's health	2
+journal of cerebrovascular and endovascular neurosurgery	1
+arthroplasty today	2
+minerva obstetrics and gynecology	1
+metabolites	1
+insects	1
+bmc medical informatics and decision making	2
+bmc public health	5
+neurosurgical review	1
+nederlands tijdschrift voor geneeskunde	3
+the annals of otology, rhinology, and laryngology	2
 copd	1
+facial plastic surgery : fps	1
+ophthalmology. glaucoma	2
+bmc geriatrics	1
+journal of cancer survivorship : research and practice	1
+technical innovations & patient support in radiation oncology	1
+american journal of audiology	2
+bmc cancer	1
+the saudi dental journal	1
+frontiers in cardiovascular medicine	1
+pain physician	1
+journal of pharmacy & pharmaceutical sciences : a publication of the canadian society for pharmaceutical sciences, societe canadienne des sciences pharmaceutiques	1
+phytotherapy research : ptr	1
+biological trace element research	1
+journal of medical internet research	15
+journal of cellular and molecular medicine	1
+international journal of emergency medicine	1
+african journal of laboratory medicine	9
+european heart journal	1
 neurology	1
-annals of clinical and translational neurology	1
+npj vaccines	2
+the journal of craniofacial surgery	3
+menopause (new york, n.y.)	3
+peerj. computer science	1
+breast (edinburgh, scotland)	1
+annals of clinical and translational neurology	2
+annals of palliative medicine	3
 frontiers in cell and developmental biology	1
-the plant journal : for cell and molecular biology	3
+zhonghua jie he he hu xi za zhi = zhonghua jiehe he huxi zazhi = chinese journal of tuberculosis and respiratory diseases	5
+clinical journal of gastroenterology	1
+world neurosurgery	6
+actas urologicas espanolas	1
+psychology & health	1
+jama ophthalmology	1
+family medicine	1
 emerging topics in life sciences	1
-expert review of molecular diagnostics	1
+journal of endourology	4
+worldviews on evidence-based nursing	2
+european journal of trauma and emergency surgery : official publication of the european trauma society	1
+the lancet. oncology	1
+journal of clinical immunology	1
+journal of neurosurgical sciences	1
+developmental cell	1
+expert review of molecular diagnostics	3
+international ophthalmology	2
+trends in psychiatry and psychotherapy	1
+pain reports	1
+craniomaxillofacial trauma & reconstruction	2
+annals of plastic surgery	4
+environmental science and pollution research international	1
+vaccines	1
+international journal of dental hygiene	1
+plants (basel, switzerland)	1
 toxins	1
-clinical oral investigations	1
+heart failure reviews	1
+international journal of spine surgery	1
+zeitschrift fur rheumatologie	1
+aging and disease	1
+female pelvic medicine & reconstructive surgery	2
+health science reports	1
 evolution letters	2
-pediatric nephrology (berlin, germany)	4
+jmir public health and surveillance	8
+diagnostic microbiology and infectious disease	5
+archives of orthopaedic and trauma surgery	2
+transfusion	1
+evaluation & the health professions	1
+neurourology and urodynamics	1
+faculty reviews	1
 transportation research interdisciplinary perspectives	1
-facial plastic surgery & aesthetic medicine	2
-the journal of chemical physics	13
+biorxiv : the preprint server for biology	6
+restorative dentistry & endodontics	1
+jaad international	1
+integrated pharmacy research & practice	1
+the journal of chemical physics	5
+annual review of biomedical data science	1
+jmir diabetes	2
+the journal of surgical research	1
+nephrology (carlton, vic.)	1
+nephrology, dialysis, transplantation : official publication of the european dialysis and transplant association - european renal association	2
+ieee transactions on visualization and computer graphics	1
+current opinion in biotechnology	1
 acs biomaterials science & engineering	1
-the laryngoscope	1
+world journal of nephrology	1
+statistics in medicine	2
+journal of cosmetic dermatology	1
+journal of clinical orthopaedics and trauma	1
+internet interventions	1
+journal of dentistry	1
+journal of dental hygiene : jdh	1
+journal of clinical neuroscience : official journal of the neurosurgical society of australasia	4
 transboundary and emerging diseases	2
-the american naturalist	15
+eye (london, england)	1
+occupational and environmental medicine	1
+american journal of perinatology	1
+bmj open respiratory research	1
+expert review of hematology	2
+infection prevention in practice	2
+human molecular genetics	1
+journal of the american medical directors association	1
+surgical and radiologic anatomy : sra	1
+dental traumatology : official publication of international association for dental traumatology	1
+the american naturalist	8
+child: care, health and development	1
+orthopaedic surgery	1
+neuro-chirurgie	1
+der ophthalmologe : zeitschrift der deutschen ophthalmologischen gesellschaft	2
+drug and alcohol dependence	1
+bmc veterinary research	2
 animals : an open access journal from mdpi	1
+bmc medical ethics	2
 ieee transactions on information theory	1
 journal of computational and graphical statistics : a joint publication of american statistical association, institute of mathematical statistics, interface foundation of north america	1
-oto open	1
+journal of ethnopharmacology	3
+anz journal of surgery	3
+critical care explorations	2
+journal of evolutionary biology	1
+substance use & misuse	1
+biochemical society transactions	1
+journal of the endocrine society	1
+frontiers in psychology	1
+the journal of foot and ankle surgery : official publication of the american college of foot and ankle surgeons	1
+respiratory medicine	1
+the lancet. digital health	1
+mayo clinic proceedings. innovations, quality & outcomes	1
+foot (edinburgh, scotland)	1
+journal of alternative and complementary medicine (new york, n.y.)	1
+ecology and evolution	2
 arxiv	1
+age and ageing	1
+infectious diseases now	1
+journal of pharmacy practice	1
+agri : agri (algoloji) dernegi'nin yayin organidir = the journal of the turkish society of algology	1
+autonomic neuroscience : basic & clinical	2
+child's nervous system : chns : official journal of the international society for pediatric neurosurgery	2
 journal of viral hepatitis	1
-international journal of surgery (london, england)	1
-nature human behaviour	2
+journal of dental anesthesia and pain medicine	1
+canadian journal of gastroenterology & hepatology	1
+advances in simulation (london, england)	1
+knee surgery, sports traumatology, arthroscopy : official journal of the esska	1
+one health outlook	1
+annals of vascular surgery	4
+nutrients	1
+journal of prosthodontics : official journal of the american college of prosthodontists	3
+current protocols	1
+european journal of neurology	1
+military medicine	2
 biological reviews of the cambridge philosophical society	2
-neurology(r) neuroimmunology & neuroinflammation	2
+indian journal of dental research : official publication of indian society for dental research	1
+journal of oral and maxillofacial surgery : official journal of the american association of oral and maxillofacial surgeons	2
+the international journal of social psychiatry	2
+jco global oncology	1
+journal of clinical and experimental dentistry	2
+clinical drug investigation	1
+the international journal of medical robotics + computer assisted surgery : mrcas	1
+current pediatric reviews	3
+bmc health services research	2
+oral and maxillofacial surgery	1
+european journal of vascular and endovascular surgery : the official journal of the european society for vascular surgery	1
+american journal of medical case reports	2
+npj digital medicine	2
+one health (amsterdam, netherlands)	1
 pregnancy hypertension	1
+pathogens and disease	8
+european review for medical and pharmacological sciences	2
+obstetrical & gynecological survey	2
+journal of cancer education : the official journal of the american association for cancer education	2
+the laryngoscope	1
+life sciences	1
+irish journal of medical science	1
+journal of the medical library association : jmla	1
+microbial ecology	1
 current research in biotechnology	1
-bmj supportive & palliative care	1
-bmj global health	1
-zoonoses and public health	6
+the angle orthodontist	2
+journal of the pediatric infectious diseases society	1
+clinical breast cancer	1
+sleep medicine reviews	2
+journal of the european academy of dermatology and venereology : jeadv	1
+pediatrics	2
+the cleft palate-craniofacial journal : official publication of the american cleft palate-craniofacial association	1
+bmc research notes	3
+journal of biomedical informatics	3
+arthroscopy : the journal of arthroscopic & related surgery : official publication of the arthroscopy association of north america and the international arthroscopy association	4
+journal of b.u.on. : official journal of the balkan union of oncology	2
+bmj supportive & palliative care	2
+bmj global health	2
+transactions of the royal society of tropical medicine and hygiene	1
+environmental research	4
+zoonoses and public health	9
+european journal of clinical investigation	1
+biotechnology reports (amsterdam, netherlands)	1
+otology & neurotology : official publication of the american otological society, american neurotology society [and] european academy of otology and neurotology	3
+geriatrics & gerontology international	1
+journal of parkinson's disease	1
+the journal of arthroplasty	3
+biology open	1
+neuro-oncology advances	1
+pharmaceutical medicine	1
+przeglad epidemiologiczny	1
+current problems in diagnostic radiology	1
 bmc biotechnology	1
+clinical neurology and neurosurgery	2
+idcases	1
+journal of clinical sleep medicine : jcsm : official publication of the american academy of sleep medicine	1
+current medical research and opinion	1
+turk kardiyoloji dernegi arsivi : turk kardiyoloji derneginin yayin organidir	1
+complementary therapies in medicine	2
+journal of science and medicine in sport	1
+the journal of emergency medicine	2
+european journal of pediatrics	1
 applied biochemistry and biotechnology	1
+turkish journal of urology	1
+the annals of thoracic surgery	1
+peptides	1
+jmir serious games	1
+sheng wu yi xue gong cheng xue za zhi = journal of biomedical engineering = shengwu yixue gongchengxue zazhi	1
 new directions for student leadership	1
-microbial biotechnology	4
-antimicrobial resistance and infection control	4
-brazilian oral research	1
-thorax	3
+aesthetic surgery journal	2
+biomolecules	1
+journal of autism and developmental disorders	1
+canadian journal of microbiology	6
+thescientificworldjournal	1
+mini reviews in medicinal chemistry	1
+cell surface (amsterdam, netherlands)	1
+nature human behaviour	1
+zhen ci yan jiu = acupuncture research	1
+cephalalgia : an international journal of headache	2
+therapeutic innovation & regulatory science	1
+pilot and feasibility studies	1
+tropical medicine and health	1
+dermatologic therapy	3
+veterinary pathology	1
+journal of virological methods	2
+the plant journal : for cell and molecular biology	1
+journal of visual communication in medicine	1
+international journal of clinical pharmacy	1
+clinical gastroenterology and hepatology : the official clinical practice journal of the american gastroenterological association	1
+american journal of orthodontics and dentofacial orthopedics : official publication of the american association of orthodontists, its constituent societies, and the american board of orthodontics	1
+perceptual and motor skills	1
+archives of cardiovascular diseases	1
+journal of korean medical science	1
+journal of gastroenterology and hepatology	1
+diabetic medicine : a journal of the british diabetic association	1
+pain management	1
+studies in health technology and informatics	3
+infectious diseases	1
+ophthalmology	1
+psychiatry research	4
+acs infectious diseases	1
+thorax	4
+journal of public health (oxford, england)	1
+aace clinical case reports	1
+international journal of dermatology	2
+european journal of obstetrics, gynecology, and reproductive biology	1
+journal of critical care	1
+journal of affective disorders	2
+cardiology research and practice	1
+deutsches arzteblatt international	5
+jmir research protocols	4
+journal of the american academy of orthopaedic surgeons. global research & reviews	2
+lipids in health and disease	1
+jama network open	2
+journal of laparoendoscopic & advanced surgical techniques. part a	1
 cancer cell	1
-journal of maxillofacial and oral surgery	1
-chemosphere	5
-bmc medicine	3
-the medical journal of australia	3
+disaster medicine and public health preparedness	2
+clinical otolaryngology : official journal of ent-uk ; official journal of netherlands society for oto-rhino-laryngology & cervico-facial surgery	2
+journal of functional biomaterials	1
+cardiovascular diabetology	1
+immunogenetics	1
+journal of public health policy	1
+digestive diseases and sciences	1
+the journal of molecular diagnostics : jmd	1
+nursing forum	2
+ima fungus	1
+obesity research & clinical practice	1
+medicine	2
+bmc complementary medicine and therapies	1
+the journal of sexual medicine	1
+journal of clinical medicine	1
+the lancet. gastroenterology & hepatology	2
+the medical journal of australia	2
+cancer medicine	1
+osteoporosis and sarcopenia	1
+world journal of plastic surgery	1
+journal of radiosurgery and sbrt	1
+molecular systems biology	1
+sleep	1
+minerva ginecologica	1
 pediatric allergy, immunology, and pulmonology	1
+jama psychiatry	1
+frontiers in veterinary science	5
+jbjs reviews	1
+plastic and reconstructive surgery. global open	1
+the journal of clinical and aesthetic dermatology	1
 animal health research reviews	1
+recent patents on nanotechnology	1
+journal of wrist surgery	1
 chemical science	4
-molecules (basel, switzerland)	1
-the journal of oral implantology	3
-journal of the american academy of orthopaedic surgeons. global research & reviews	1
+american journal of otolaryngology	2
+international journal of biological macromolecules	1
+current urology	1
+the journal of clinical psychiatry	2
+spartan medical research journal	1
+plastic and reconstructive surgery	2
+journal of child psychology and psychiatry, and allied disciplines	1
+international journal of women's dermatology	1
 proteomics. clinical applications	1
-otology & neurotology : official publication of the american otological society, american neurotology society [and] european academy of otology and neurotology	1
-the international journal of periodontics & restorative dentistry	2
-american journal of physical anthropology	5
+cold spring harbor perspectives in medicine	1
+database : the journal of biological databases and curation	2
+the journal of maternal-fetal & neonatal medicine : the official journal of the european association of perinatal medicine, the federation of asia and oceania perinatal societies, the international society of perinatal obstetricians	1
+medicina (kaunas, lithuania)	1
+sports medicine - open	1
+journal of preventive medicine and public health = yebang uihakhoe chi	1
+translational stroke research	1
+quintessence international (berlin, germany : 1985)	1
+apmis : acta pathologica, microbiologica, et immunologica scandinavica	1
+neuropsychology review	1
+dermatology and therapy	1
+clinics (sao paulo, brazil)	1
+plant biotechnology journal	1
+drug safety	1
+european urology focus	1
+journal of thoracic disease	2
+the european respiratory journal	2
+gynecologic oncology	1
+the international journal of eating disorders	1
+clinical genitourinary cancer	1
+lupus	3
 nature chemistry	1
-npj vaccines	1
+gland surgery	2
+journal of minimally invasive surgery	1
+photodermatology, photoimmunology & photomedicine	2
+cardiovascular revascularization medicine : including molecular interventions	1
+neurointervention	1
+journal of fish diseases	1
 pathology, research and practice	1
-human immunology	2
+shoulder & elbow	1
+food and environmental virology	1
+acta oto-laryngologica	1
+preventive medicine	1
+modern pathology : an official journal of the united states and canadian academy of pathology, inc	1
+the journal of vascular access	1
+molecules (basel, switzerland)	1
+british journal of neurosurgery	1
 trials	1
 journal of pediatric and adolescent gynecology	1
-environmental science & technology	8
+american journal of infection control	1
+medicina oral, patologia oral y cirugia bucal	2
 the american journal of gastroenterology	3
-environmental science. processes & impacts	2
+environmental science. processes & impacts	1
+talanta	1
+hpb : the official journal of the international hepato pancreato biliary association	1
 critical care medicine	1
 journal of food science and technology	1
-journal of indian prosthodontic society	1
+phytomedicine : international journal of phytotherapy and phytopharmacology	2
+the primary care companion for cns disorders	1
+european urology oncology	1
+annual review of virology	1
+journal of investigative surgery : the official journal of the academy of surgical research	1
+environmental pollution (barking, essex : 1987)	1
+helicobacter	1
+british dental journal	1
+infectious disease clinics of north america	1
 journal of pediatric hematology/oncology	1
-current opinion in hiv and aids	1
-computer methods in biomechanics and biomedical engineering	3
+clinical research in cardiology : official journal of the german cardiac society	6
+heart & lung : the journal of critical care	1
+clinical journal of the american society of nephrology : cjasn	2
+pediatric emergency care	3
+the journal of clinical endocrinology and metabolism	1
+journal of periodontal research	1
+journal of drug assessment	1
+journal of clinical periodontology	2
+osteoarthritis and cartilage	2
+preventive medicine reports	1
+psychosomatic medicine	1
+updates in surgery	1
+world journal of gastroenterology	1
+journal of the turkish german gynecological association	1
+musculoskeletal care	1
+clinical spine surgery	2
+world journal of urology	3
+la tunisie medicale	1
+infection, disease & health	1
+journal of advanced nursing	1
+tropical medicine & international health : tm & ih	2
 veterinary record open	1
-angewandte chemie (international ed. in english)	2
-clinical journal of the american society of nephrology : cjasn	1
+angewandte chemie (international ed. in english)	1
+journal of visualized experiments : jove	1
+faseb bioadvances	1
 current treatment options in gastroenterology	1
+jco clinical cancer informatics	1
+journal of magnetic resonance imaging : jmri	1
 dalton transactions (cambridge, england : 2003)	1
-journal of hazardous materials	3
+advances in urology	1
+interactive journal of medical research	2
+annals of the american thoracic society	1
+hand (new york, n.y.)	2
+oral oncology	1
+international journal of chronic obstructive pulmonary disease	1
+currents in pharmacy teaching & learning	1
+embo reports	1
+journal of hazardous materials	1
+american journal of health promotion : ajhp	1
 plant direct	1
 rheumatology (oxford, england)	1
-hepatology (baltimore, md.)	3
+blood	1
+hepatology (baltimore, md.)	1
+jaapa : official journal of the american academy of physician assistants	1
 journal of the international aids society	1
-international journal of nephrology and renovascular disease	1
-hormone research in paediatrics	1
-aging and disease	1
+journal of clinical psychopharmacology	2
+journal of environmental pathology, toxicology and oncology : official organ of the international society for environmental toxicology and cancer	1
+molecular neurobiology	1
+the lancet. diabetes & endocrinology	1
+hss journal : the musculoskeletal journal of hospital for special surgery	1
+emergency medicine australasia : ema	1
+journal of back and musculoskeletal rehabilitation	1
+neurology india	1
+revista brasileira de ginecologia e obstetricia : revista da federacao brasileira das sociedades de ginecologia e obstetricia	1
+international journal of technology assessment in health care	1
+the gerontologist	1
+pathogens and global health	1
+ortopedia, traumatologia, rehabilitacja	1
+the journal of contemporary dental practice	1
+oncology letters	2
+acta radiologica (stockholm, sweden : 1987)	1
+journal of clinical epidemiology	1
+altex	1
+psychiatry investigation	1
+physiotherapy	1
+osong public health and research perspectives	1
+frontiers in oncology	1
+bone marrow transplantation	1
+einstein (sao paulo, brazil)	1
+journal of orthopaedic research : official publication of the orthopaedic research society	1
+lin chuang er bi yan hou tou jing wai ke za zhi = journal of clinical otorhinolaryngology, head, and neck surgery	1
+biochemical and biophysical research communications	1
+australasian journal on ageing	1
 the british journal of dermatology	1
-nederlands tijdschrift voor geneeskunde	1
-inflammatory bowel diseases	3
+urology	2
+medical journal, armed forces india	1
+the new phytologist	1
+revista panamericana de salud publica = pan american journal of public health	1
+biological research for nursing	1
+world journal of surgery	1
+orthopaedic journal of sports medicine	1
+clinical toxicology (philadelphia, pa.)	1
+healthcare informatics research	1
+standards in genomic sciences	2
+proteomics	1
+inflammatory bowel diseases	2
+applied psychology. health and well-being	1
 immunology and cell biology	1
 cell chemical biology	1
+european geriatric medicine	1
+journal of medicinal food	1
+pacing and clinical electrophysiology : pace	2
 investigative ophthalmology & visual science	1
-retrovirology	2
-human biology	1
+retrovirology	1
+american journal of cardiovascular drugs : drugs, devices, and other interventions	1
+oral surgery, oral medicine, oral pathology and oral radiology	1
 journal of dental research	1
+international journal of pediatric otorhinolaryngology	1
+ocular immunology and inflammation	1
 the australian & new zealand journal of obstetrics & gynaecology	1
-american journal of medical genetics. part a	2
-metabolomics : official journal of the metabolomic society	1
-the journal of investigative dermatology	1
+global challenges (hoboken, nj)	1
+american journal of medical genetics. part a	1
+telemedicine journal and e-health : the official journal of the american telemedicine association	1
+clinical and experimental dermatology	1
+infectious diseases (london, england)	1
+oncotarget	1
+bmc medical education	1
+american journal of dentistry	1
+american journal of obstetrics and gynecology	1
+zhonghua er ke za zhi = chinese journal of pediatrics	2
+journal of neural engineering	1
+advances in experimental medicine and biology	1
+virus research	1
+neuroscience and biobehavioral reviews	2
+obesity surgery	1
+infection	1
+international journal of otolaryngology	1
+expert opinion on drug safety	2
+emergencias : revista de la sociedad espanola de medicina de emergencias	1
+indian journal of endocrinology and metabolism	1
+the journal of experimental medicine	2
+journal of telemedicine and telecare	1
+reviews in the neurosciences	1
+journal of cranio-maxillo-facial surgery : official publication of the european association for cranio-maxillo-facial surgery	1
+annals of pediatric cardiology	2
 bioelectrochemistry (amsterdam, netherlands)	1
-leukemia & lymphoma	1
+biology letters	3
 journal of breath research	1
-food research international (ottawa, ont.)	1
+world journal of orthopedics	1
+the western journal of emergency medicine	1
+the journal of cardiovascular nursing	1
+neurological sciences : official journal of the italian neurological society and of the italian society of clinical neurophysiology	1
+chinese clinical oncology	1
+asian journal of psychiatry	1
+applied immunohistochemistry & molecular morphology : aimm	1
+journal of the american chemical society	2
 metallomics : integrated biometal science	1
+pain management nursing : official journal of the american society of pain management nurses	1
+journal of managed care & specialty pharmacy	1
+chiropractic & manual therapies	1
 journal of chemical theory and computation	3
 pneumonia (nathan qld.)	1
+research synthesis methods	1
+mmw fortschritte der medizin	1
 molecular & cellular oncology	1
+journal of patient safety	1
 annals of internal medicine	1
+public health reports (washington, d.c. : 1974)	1
+nephrologie & therapeutique	1
 the journal of physical chemistry letters	2
+the consultant pharmacist : the journal of the american society of consultant pharmacists	1
+journal of neurosurgery. pediatrics	1
+minerva endocrinologica	1
+bju international	2
+nature protocols	2
+experimental lung research	1
 regional anesthesia and pain medicine	1
 journal of travel medicine	1
-proceedings of the ieee. institute of electrical and electronics engineers	1
-journal of biotechnology	2
-biomed research international	2
+ultraschall in der medizin (stuttgart, germany : 1980)	1
+journal of biotechnology	1
+international journal of breast cancer	1
+clinical and vaccine immunology : cvi	3
 digestive diseases (basel, switzerland)	1
+drugs	1
 pancreatology : official journal of the international association of pancreatology (iap) ... [et al.]	1
 clinical nutrition (edinburgh, scotland)	1
-aids (london, england)	5
+cbe life sciences education	1
+biomedicine & pharmacotherapy = biomedecine & pharmacotherapie	1
+the journal of prosthetic dentistry	1
+aids (london, england)	1
+cartilage	1
+breast cancer (dove medical press)	1
+journal of proteomics	2
+annals of neurology	1
+academic radiology	1
 british journal of pharmacology	1
-physical chemistry chemical physics : pccp	2
-the international journal of oral & maxillofacial implants	7
+physical chemistry chemical physics : pccp	1
+indoor air	1
 journal of aoac international	1
-cancer	2
+revista brasileira de psiquiatria (sao paulo, brazil : 1999)	1
+bmc cardiovascular disorders	2
+international journal of mycobacteriology	1
+lymphology	1
+annals of the new york academy of sciences	1
+national vital statistics reports : from the centers for disease control and prevention, national center for health statistics, national vital statistics system	1
+expert opinion on therapeutic patents	3
+journal of open research software	2
+acta neurochirurgica	1
+journal of cardiovascular magnetic resonance : official journal of the society for cardiovascular magnetic resonance	1
+cns drugs	1
+nature chemical biology	1
+burns : journal of the international society for burn injuries	1
+expert opinion on investigational drugs	2
+health communication	1
+drugs of today (barcelona, spain : 1998)	1
+computational biology and chemistry	1
+the british journal of general practice : the journal of the royal college of general practitioners	1
+dermatology online journal	2
+retina (philadelphia, pa.)	1
+the behavior analyst	1
+seminars in arthritis and rheumatism	1
+international journal of medical informatics	3
 phytopathology	1
-journal of the california dental association	1
-current opinion in genetics & development	1
-journal of clinical and diagnostic research : jcdr	1
+journal of psychopharmacology (oxford, england)	1
+sports health	1
+supportive care in cancer : official journal of the multinational association of supportive care in cancer	1
+yearbook of medical informatics	1
+antiviral research	2
+expert opinion on drug metabolism & toxicology	1
+expert review of anti-infective therapy	1
+the journal of hand surgery asian-pacific volume	1
 journal of forensic sciences	1
+journal of the american dental association (1939)	1
+neurology(r) neuroimmunology & neuroinflammation	1
+global pediatric health	1
+the journal of hand surgery	1
+clinical oral implants research	1
+annual review of genomics and human genetics	1
+recent patents on biotechnology	1
+archives of iranian medicine	1
+american journal of therapeutics	1
+world journal of clinical pediatrics	1
+japan journal of nursing science : jjns	1
 ultrasonics sonochemistry	1
-combinatorial chemistry & high throughput screening	1
+the lancet. hiv	1
+journal of human lactation : official journal of international lactation consultant association	1
+orthopedics	1
+neurosciences (riyadh, saudi arabia)	1
+photodiagnosis and photodynamic therapy	1
+journal of endodontics	1
+gesundheitswesen (bundesverband der arzte des offentlichen gesundheitsdienstes (germany))	1
+acs applied materials & interfaces	1
+diabetes technology & therapeutics	1
+platelets	1
+journal of applied oral science : revista fob	1
 anesthesia and analgesia	2
+mayo clinic proceedings	1
+wounds : a compendium of clinical research and practice	1
+global spine journal	1
+asian american journal of psychology	1
+european journal of surgical oncology : the journal of the european society of surgical oncology and the british association of surgical oncology	1
+journal of health communication	1
+the american journal of cardiology	1
+european spine journal : official publication of the european spine society, the european spinal deformity society, and the european section of the cervical spine research society	1
 cellular and molecular gastroenterology and hepatology	1
-medicine	1
-journal of proteome research	14
+klinische monatsblatter fur augenheilkunde	1
+methods of information in medicine	1
+infection ecology & epidemiology	1
+archives of microbiology	1
+bmc musculoskeletal disorders	1
+journal of orthopaedic science : official journal of the japanese orthopaedic association	1
+american journal of orthopedics (belle mead, n.j.)	1
+international urology and nephrology	1
+tobacco control	1
+journal of american college health : j of ach	1
+annals of surgery	1
+the journal of adolescent health : official publication of the society for adolescent medicine	1
+journal of oral rehabilitation	1
+chinese medical journal	1
+endocrine practice : official journal of the american college of endocrinology and the american association of clinical endocrinologists	1
+journal of proteome research	3
+bmc developmental biology	1
+international journal of audiology	1
+the american journal of sports medicine	1
+bmc psychiatry	1
+therapeutic advances in neurological disorders	1
+international endodontic journal	1
+pharmacoepidemiology and drug safety	1
+journal of clinical and diagnostic research : jcdr	1
 natural product reports	1
+nephrology nursing journal : journal of the american nephrology nurses' association	1
+the journal of pharmacy technology : jpt : official publication of the association of pharmacy technicians	2
 joint commission journal on quality and patient safety	1
 ecohealth	1
 chest	1
-american journal of surgery	2
-journal of microbiology & biology education	1
-jornal brasileiro de nefrologia : 'orgao oficial de sociedades brasileira e latino-americana de nefrologia	1
-chinese clinical oncology	1
-cancer treatment and research	1
-dental traumatology : official publication of international association for dental traumatology	2
-hepatic oncology	1
-dental materials : official publication of the academy of dental materials	2
-human mutation	2
-journal of gastrointestinal surgery : official journal of the society for surgery of the alimentary tract	2
-dna research : an international journal for rapid publication of reports on genes and genomes	1
-biology direct	2
-veterinary research	1
-journal of natural products	2
-expert review of gastroenterology & hepatology	1
-health promotion practice	1
-integrative and comparative biology	1
-plos currents	3
-acs chemical biology	1
-revista do colegio brasileiro de cirurgioes	1
-world journal of gastroenterology	1
-surgical oncology clinics of north america	1
-preventive veterinary medicine	2
-ieee/acm transactions on computational biology and bioinformatics	3
-journal of applied oral science : revista fob	4
-antiviral research	1
-diabetology & metabolic syndrome	2
-paediatrics and international child health	1
-clinical implant dentistry and related research	1
-current microbiology	1
-chemical communications (cambridge, england)	1
-gene	1
+springerplus	1
+the journal of urology	1
+postgraduate medicine	1
+health information and libraries journal	1
+jmir mhealth and uhealth	1
+neuropsychology	1
+journal of maxillofacial and oral surgery	1
+journal of pediatric orthopedics	1
 pediatric surgery international	1
-applied immunohistochemistry & molecular morphology : aimm	2
-international journal for parasitology	2
-annual review of medicine	1
-bioresource technology	3
-journal of human lactation : official journal of international lactation consultant association	1
-frontiers in chemistry	2
-presse medicale (paris, france : 1983)	2
-current opinion in infectious diseases	1
-immunity	1
-risk analysis : an official publication of the society for risk analysis	1
-head & neck	1
-centaurus; international magazine of the history of science and medicine	1
-journal of gastrointestinal oncology	1
-the journal of craniofacial surgery	8
-clinical oral implants research	1
-neurosurgical review	1
-journal of prosthodontics : official journal of the american college of prosthodontists	3
-journal of environmental quality	1
-liver international : official journal of the international association for the study of the liver	1
-acta odontologica latinoamericana : aol	2
-international endodontic journal	1
-journal of the american society for mass spectrometry	1
-psychology of addictive behaviors : journal of the society of psychologists in addictive behaviors	1
-european journal of dentistry	1
-the quarterly review of biology	1
-european journal of oral sciences	1
-the american journal of forensic medicine and pathology	1
-current protocols in bioinformatics	3
-brazilian dental journal	2
-implant dentistry	3
-journal of parallel and distributed computing	1
-medecine et maladies infectieuses	1
-american journal of infection control	1
-annals of surgery	2
-journal of acquired immune deficiency syndromes (1999)	1
-heredity	1
-journal of water and health	2
-nature reviews. drug discovery	1
-the journal of genetic psychology	2
-advances in surgery	1
-acs nano	1
-langmuir : the acs journal of surfaces and colloids	2
-current opinion in organ transplantation	1
-molecular and cellular biochemistry	1
-human pathology	2
-journal of biology	1
-current protocols in microbiology	1
-dentistry today	1
-adolescence	1
-theoretical population biology	5
-computer methods and programs in biomedicine	1
-current hiv research	1
-evolution & development	1
-optics express	1
-journal of oral rehabilitation	2
-rapid communications in mass spectrometry : rcm	1
-the journal of pediatrics	1
-biochimie	1
-faraday discussions	1
-the american surgeon	1
-journal of experimental zoology. part b, molecular and developmental evolution	1
-toxicon : official journal of the international society on toxinology	1
-aids reviews	1
-bulletin of entomological research	1
-neuroscience letters	1
-evaluation review	1
-proceedings. ieee computational systems bioinformatics conference	1
-the journal of psychology	1
-heart & lung : the journal of critical care	1
-journal of biomedical informatics	1
-american journal of respiratory cell and molecular biology	1
-methods in cell biology	1
-human molecular genetics	3
-cold spring harbor symposia on quantitative biology	1
-plant molecular biology	2
-pacific symposium on biocomputing. pacific symposium on biocomputing	3
-pediatric and developmental pathology : the official journal of the society for pediatric pathology and the paediatric pathology society	2
-american journal of perinatology	1
-advances in biochemical engineering/biotechnology	1
-dna sequence : the journal of dna sequencing and mapping	1
-journal of the european academy of dermatology and venereology : jeadv	1
-archives of dermatology	2
-leprosy review	1
-medecine tropicale : revue du corps de sante colonial	1
-clinical dysmorphology	1
-european journal of dermatology : ejd	1
-orthopedics	1
-the journal of trauma	1
-proceedings. international conference on intelligent systems for molecular biology	2
-the american journal of surgical pathology	1
-ajnr. american journal of neuroradiology	3
-microbial & comparative genomics	1
-journal of periodontology	1
-dermatology (basel, switzerland)	1
-oncogene	1
-annales de dermatologie et de venereologie	1
-laboratory investigation; a journal of technical methods and pathology	1
-computer applications in the biosciences : cabios	6
-annals of plastic surgery	1
-american journal of ophthalmology	1
-northwestern dental research	1
-reproduction, nutrition, development	1
-journal of the american college of cardiology	1
-journal of animal science	1
-computers & chemistry	1
-ajr. american journal of roentgenology	1
-british journal of plastic surgery	1
-revista da associacao medica brasileira (1992)	1
-canadian journal of ophthalmology. journal canadien d'ophtalmologie	2
-journal of biomolecular structure & dynamics	4
-spine	1
-journal of cellular biochemistry	1
-molekuliarnaia biologiia	3
-journal of morphology	1
-international ophthalmology clinics	1
-american journal of public health	1
-the american journal of clinical hypnosis	1
-texas medicine	1
-revista brasileira de enfermagem	1
-journal of pediatric surgery	1
-revista chilena de pediatria	4
-transactions of the association of american physicians	1
+health information science and systems	1

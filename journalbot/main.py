@@ -124,7 +124,7 @@ def get_next_paper(paperlist, journal_file, search_file, CUTOFF=60):
                     )
         except:
             logging.error("Error in loading %s" % entrylist[0])
-    paperlist.sort(key=lambda paper: paper["score"], reverse=True)
+    paperlist.sort(key=lambda paper: (-paper["score"], paper['date']))
     paperlist_path = os.path.join(os.path.dirname(journal_file), 'paperlist.tsv')
     out_file = csv.DictWriter(
         open(paperlist_path, "w", newline=""),
@@ -275,8 +275,8 @@ def post_thread(search_file, journal_file, tinterval, date_cutoff):
             if next_paper["score"] > 0:
                 try:
                     message = generate_message(next_paper)
-                    # api.update_status(message)
-                    # lastTweetTime = datetime.datetime.now()
+                    api.update_status(message)
+                    lastTweetTime = datetime.datetime.now()
                 except:
                     logging.error("Error posting status: %s" % message)
             else:
